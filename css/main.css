@@ -698,6 +698,18 @@ label > input[type="radio"] {
  *  06. buttons - (_button-essentials.scss)
  *
  * ------------------------------------------------------------------- */
+#ariane a,
+#hubble a,
+#spectre a,
+#lagrange a{
+	text-transform: uppercase;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
 .button,
 a.button,
 button,
