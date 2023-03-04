@@ -872,7 +872,21 @@ input::-moz-focus-inner {
 	color: #bba31b;
 }
 
-
+/* logo camera 
+ *-----------------------------------------------------------*/
+ .logocam, img{
+   vertical-align:baseline;
+ }
+ 
+ .logocam{
+   font-family: 'roboto-light',
+   sans-serif;
+   font-size: 1,2rem;
+   line-height: 1.8;
+   color: #373737;
+   color: #666666;
+ }
+ 
 /* additional typo styles - (_additional-typo.scss)
  * ------------------------------------------------------------------- */
 
