@@ -872,19 +872,45 @@ input::-moz-focus-inner {
 	color: #bba31b;
 }
 
+/* images à créditer
+ * ------------------------------------------------------------------- */
+
+.corb{
+    display:inline;
+    text-align:center;
+ }
+
+.corb img{
+    height:auto;
+}
+
+.blob{
+	display:inline;
+
+}
+
+.corbac1{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center; 
+}
+
 /* logo camera 
  *-----------------------------------------------------------*/
- .logocam, img{
-   vertical-align:baseline;
+
+ .logocam img{
+	vertical-align:middle;
+    height:18px;
+    width:21px;
  }
  
  .logocam{
-   font-family: 'roboto-light',
-   sans-serif;
-   font-size: 1,2rem;
-   line-height: 1.8;
-   color: #373737;
-   color: #666666;
+    font-family: 'roboto-light',
+    sans-serif;
+    font-size: 1,2rem;
+    color: #373737;
+    color: #666666;
  }
  
 /* additional typo styles - (_additional-typo.scss)
@@ -1923,7 +1949,7 @@ header .logo a {
 	.menu-toggle.is-clicked span::before,
 	.menu-toggle.is-clicked span::after {
 		background-color: black;
-		-moz-transition-delay: 0s, 0.2s;
+		-moz-transition-delay: 0s, 0.5s;
 		-o-transition-delay: 0s, 0.2s;
 		-webkit-transition-delay: 0s, 0.2s;
 		-ms-transition-delay: 0s, 0.2s;
@@ -1987,7 +2013,7 @@ header .logo a {
 	}
 
 	.main-navigation li.has-children a {
-		position: relative;
+		position: none;
 	}
 
 	.main-navigation li.has-children > a:after {
