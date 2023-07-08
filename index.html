@@ -13,7 +13,7 @@
 
    <!-- mobile specific metas
    ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
  	<!-- CSS
    ================================================== -->
@@ -45,12 +45,12 @@
    	<div class="row header-content">
 
    		<div class="logo">
-	         <a href="index.html">Author</a>
+	         <a href="/">Author</a>
 	      </div>
 
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation sf-menu">
-					<li class="current"><a href="index.html" title="">Accueil</a></li>
+					<li class="current"><a href="/" title="">Accueil</a></li>
 					<li class="has-children">
 						<a href="category.html" title="">Photographies</a>
 					</li>
@@ -154,9 +154,10 @@
    <section id="bricks">
 
    	<div class="row masonry">
+		<div class="container">
 
    		<!-- brick-wrapper -->
-         <div class="bricks-wrapper">
+         	<div class="bricks-wrapper">
 
          	<div class="grid-sizer"></div>
 
@@ -538,25 +539,21 @@
 
         		</article> <!-- end article -->
 
-         </div> <!-- end brick-wrapper -->
+         	</div> <!-- end brick-wrapper -->
+		</div>
 
    	</div> <!-- end row -->
 
    	<div class="row">
 
-   		<nav class="pagination">
-		      <span class="page-numbers prev inactive">Prev</span>
-		   	<span class="page-numbers current">1</span>
-		   	<a href="#" class="page-numbers">2</a>
-		      <a href="#" class="page-numbers">3</a>
-		      <a href="#" class="page-numbers">4</a>
-		      <a href="#" class="page-numbers">5</a>
-		      <a href="#" class="page-numbers">6</a>
-		      <a href="#" class="page-numbers">7</a>
-		      <a href="#" class="page-numbers">8</a>
-		      <a href="#" class="page-numbers">9</a>
-		   	<a href="#" class="page-numbers next">Next</a>
-	      </nav>
+		<nav class="pagination">
+			<div class="pagination-buttons">
+			<button id="previous-page-button">&lt;</button>
+			<div id="pagination-container" class="page-numbers"></div>
+			<button id="next-page-button">&gt;</button>
+			</div>
+		</nav>
+		  
 
    	</div>
 
@@ -641,6 +638,9 @@
    <script src="js/plugins.js"></script>
    <script src="js/jquery.appear.js"></script>
    <script src="js/main.js"></script>
+   <script src="js/pagination.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
 
 </body>
 
