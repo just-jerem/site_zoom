@@ -1258,6 +1258,13 @@
 	 color: #999999;
  }
  
+ /* grid appareils mobiles */
+@media (max-width: 767px) {
+	.bricks-wrapper {
+	  
+	  column-count: 1; /* mets les articles sur 1 colonne */
+	}
+  }
  
  /* featured post slider - (_common-styles.scss)
   * ------------------------------------------------------------------- */
