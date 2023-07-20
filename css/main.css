@@ -150,6 +150,7 @@
  }
  p img {
 	 margin: 0;
+	 text-align:justify;
  }
  p.lead {
 	 font-family: 'roboto-light', sans-serif;
@@ -157,12 +158,21 @@
 	 line-height: 1.8;
 	 color: #373737;
 	 color: #666666;
+	 text-align:justify;
  }
  @media only screen and (max-width:768px) {
 	 p.lead {
 		 font-size: 2.1rem;
+		 text-align:justify;
 	 }
  }
+
+p {
+
+	text-align:justify;
+
+}
+
  em, i, strong, b {
 	 font-size: 1.7rem;
 	 line-height: 3rem;
