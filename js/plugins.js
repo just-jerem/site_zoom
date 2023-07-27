@@ -155,7 +155,7 @@ h={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify"
  * Copyright (c) 2015 
  *
  * Dual licensed under the MIT and GPL licenses:
- *	http://www.opensource.org/licenses/mit-license.php
+ *	http://www.opensource.org/licenses/mit-license.html
  *	http://www.gnu.org/licenses/gpl.html
  */
 
