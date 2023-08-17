@@ -1,5 +1,3 @@
-
-
 <div class="logo">
 			<a href="/">Author</a>
 		</div>
@@ -117,28 +115,3 @@
 		<li><a href="/contact.html" title="">L'équipe</a></li>
 	</ul>
 </nav>
-
-<div class="search-wrap">
-
-				<form role="search" method="get" class="search-form" action="#">
-					<label>
-						<span class="hide-content">Search for:</span>
-						<input type="search" class="search-field" id="search-input" placeholder="Type Your Keywords" value="" name="s"
-							title="Search for:" autocomplete="off">
-					</label>
-					<input type="submit" class="search-submit" value="Search">
-				</form>
-
-				<a href="#" id="close-search" class="close-btn">Close</a>
-
-			</div> <!-- end search wrap -->
-
-			<div class="triggers">
-				<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
-				<a class="menu-toggle" href="#"><span>Menu</span></a>
-			</div> <!-- end triggers -->
-
-		</div>
-
-	</header> <!-- end header -->
-

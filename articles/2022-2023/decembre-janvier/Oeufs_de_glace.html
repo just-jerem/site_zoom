@@ -6,47 +6,45 @@
 
 <head>
 
-	<!--- basic page needs
+    <!--- basic page needs
    ================================================== -->
-	<meta charset="utf-8">
-	<title>Zoom sur les Sciences</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+    <meta charset="utf-8">
+    <title>Zoom sur les Sciences</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<!-- mobile specific metas
+    <!-- mobile specific metas
    ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS
+    <!-- CSS
    ================================================== -->
-	<link rel="stylesheet" href="../../../css/base.css">
-	<link rel="stylesheet" href="../../../css/vendor.css">
-	<link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/base.css">
+    <link rel="stylesheet" href="../../../css/vendor.css">
+    <link rel="stylesheet" href="../../../css/main.css">
 
 
-	<!-- script
+    <!-- script
    ================================================== -->
-	<script src="../../../js/modernizr.js"></script>
-	<script src="../../../js/pace.min.js"></script>
+    <script src="../../../js/modernizr.js"></script>
+    <script src="../../../js/pace.min.js"></script>
 
-	<!-- favicons
+    <!-- favicons
 	================================================== -->
-	<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
-	<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
 
 </head>
 
 <body id="top">
 
-	<!-- header
+    <!-- header
    ================================================== -->
+    <header class="short-header">
 
-   <header class="short-header">
+        <div class="gradient-block"></div>
 
-    <div class="gradient-block"></div>
-
-    <div class="row header-content">
-
+        <div class="row header-content">
 
         <?php
     // Include the menu
@@ -80,7 +78,29 @@
         });
     </script>
 
-            
+            <div class="search-wrap">
+
+                <form role="search" method="get" class="search-form" action="#">
+                    <label>
+                        <span class="hide-content">Search for:</span>
+                        <input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s"
+                            title="Search for:" autocomplete="off">
+                    </label>
+                    <input type="submit" class="search-submit" value="Search">
+                </form>
+
+                <a href="#" id="close-search" class="close-btn">Close</a>
+
+            </div> <!-- end search wrap -->
+
+            <div class="triggers">
+                <a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+                <a class="menu-toggle" href="#"><span>Menu</span></a>
+            </div> <!-- end triggers -->
+
+        </div>
+
+    </header> <!-- end header -->
 
 
     <!-- content
