@@ -1604,11 +1604,12 @@ p {
   * ------------------------------------------------------------------- */
  header {
 	 width: 100%;
-	 background: #DBDBDB url(../images/escheresque_@2X.png) repeat;
-	 background-size: 46px 29px;
+	 background-color:#73faab;
+	 background-size: 400px 320px;
 	 height: 130px;
 	 border-bottom: 1px solid #E5E5E5;
  }
+
  header .header-content {
 	 height: auto;
 	 max-width: 1290px;
@@ -1634,8 +1635,8 @@ p {
   * ------------------------------------------------------------------- */
  header .logo {
 	 position: absolute;
-	 left: 35px;
-	 top: 6px;
+	 left: -1%;
+	 top: 29px;
 	 z-index: 601;
  }
  
@@ -1645,10 +1646,10 @@ p {
 	 padding: 0;
 	 outline: 0;
 	 border: none;
-	 width: 60px;
-	 height: 60px;
+	 width: 120px;
+	 height: 120px;
 	 background: url("../images/logo.png") no-repeat center;
-	 background-size: 60px 60px;
+	 background-size: 120px 120px;
 	 font: 0/0 a;
 	 text-shadow: none;
 	 color: transparent;
@@ -1658,11 +1659,33 @@ p {
 	 -ms-transition: all 0.5s ease-in-out;
 	 transition: all 0.5s ease-in-out;
  }
+
+ @media only screen and (){
+	header .logo a {
+
+	}
+	
+
+
+ }
+ @media only screen and (){
+	header .logo a {
+
+
+	}
+
+ }
  
  /* responsive:
   * header logo
   * ------------------------------------------------------------------- */
- @media only screen and (max-width:768px) {
+  @media only screen and (min-width:768px) {
+	header .logo {
+		left: 45px;
+	}
+
+} 
+  @media only screen and (max-width:768px) {
 	 header .logo {
 		 left: 45px;
 	 }
@@ -1740,15 +1763,19 @@ p {
 	 display: table;
 	 float: right;
 	 padding-right: 85px;
+	 padding-left: 40px;
 	 font-family: "montserrat-regular", sans-serif;
 	 font-size: 15px;
 	 height: 78px;
  }
  
+ 
+
  .main-navigation {
 	 display: table-cell;
 	 vertical-align: middle;
 	 list-style: none;
+	 z-index:1;
  }
  
  .main-navigation li {
