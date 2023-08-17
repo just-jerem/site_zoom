@@ -641,6 +641,27 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
 
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		  const queryString = window.location.search;
+		  const urlParams = new URLSearchParams(queryString);
+		  const searchQuery = urlParams.get('q');
+	
+		  const articles = [...document.querySelectorAll('.brick')]; // Array of <article> elements
+		  let searchResults = []; // Array to store search results
+	
+		  // Rest of the code, including updatePagination and search functions...
+	
+		  // Check if a search query is present in the URL
+		  if (searchQuery) {
+			search(searchQuery);
+		  } else {
+			updatePagination();
+		  }
+
+		});
+	  </script>
+
 </body>
 
 </html>
