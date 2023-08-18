@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const articlesPerPage = 6;
+  const articlesPerPage = 8;
   const masonryContainer = document.querySelector('.bricks-wrapper');
   const articles = [...document.querySelectorAll('.brick')];
   const searchInput = document.querySelector('.search-field');
