@@ -1,18 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const articlesPerPage = 8;
+  const articlesPerPage = 6; // Maximum number of articles per page
   const masonryContainer = document.querySelector('.bricks-wrapper');
-  const articles = [...document.querySelectorAll('.brick')];
-  const searchInput = document.querySelector('.search-field');
-  const searchError = document.querySelector('.search-error');
-  const articlesContainer = document.querySelector('.articles-container'); // Container for articles
+  const articles = [...document.querySelectorAll('.brick')]; // Array of <article> elements
 
-  let filteredArticles = articles.slice();
   let currentPage = 1;
-  let masonry;
+  let masonry; // Masonry instance
 
   function updatePagination() {
-    const totalPages = getTotalPages(filteredArticles);
+    const totalPages = getTotalPages();
 
+    // Validate and adjust current page if necessary
     if (currentPage < 1) {
       currentPage = 1;
     } else if (currentPage > totalPages) {
@@ -21,18 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const startIndex = (currentPage - 1) * articlesPerPage;
     const endIndex = currentPage * articlesPerPage;
-    const visibleArticles = filteredArticles.slice(startIndex, endIndex);
+    const visibleArticles = articles.slice(startIndex, endIndex);
 
-    articles.forEach(article => {
+    // Hide all articles
+    articles.forEach((article) => {
       article.style.display = 'none';
     });
 
-    visibleArticles.forEach(article => {
+    // Show visible articles
+    visibleArticles.forEach((article) => {
       article.style.display = 'block';
     });
 
+    // Update pagination UI (e.g., active page indicator, disable/enable buttons)
     const paginationContainer = document.getElementById('pagination-container');
-    paginationContainer.innerHTML = '';
+    paginationContainer.innerHTML = ''; // Clear previous buttons
 
     for (let i = 1; i <= totalPages; i++) {
       const button = document.createElement('button');
@@ -48,12 +48,14 @@ document.addEventListener('DOMContentLoaded', function() {
       paginationContainer.appendChild(button);
     }
 
+    // Update previous and next buttons
     const previousPageButton = document.getElementById('previous-page-button');
     const nextPageButton = document.getElementById('next-page-button');
 
     previousPageButton.disabled = currentPage === 1;
     nextPageButton.disabled = currentPage === totalPages;
 
+    // Initialize or reload the Masonry layout
     if (masonry) {
       masonry.reloadItems();
       masonry.layout();
@@ -70,46 +72,23 @@ document.addEventListener('DOMContentLoaded', function() {
   function goToPage(page) {
     currentPage = page;
     updatePagination();
-    onPageChange(currentPage);
+    onPageChange(currentPage); // Call the callback function on page change
   }
 
-  function getTotalPages(filtered) {
-    return Math.ceil(filtered.length / articlesPerPage);
+  function getTotalPages() {
+    return Math.ceil(articles.length / articlesPerPage);
   }
 
-  function onPageChange(page) {
-    console.log(`Accessing page ${page}`);
-  }
-
-  function filterArticles(query) {
-    const lowerCaseQuery = query.toLowerCase();
-    filteredArticles = articles.filter(article => article.textContent.toLowerCase().includes(lowerCaseQuery));
-
-    searchError.style.display = filteredArticles.length > 0 ? 'none' : 'block';
-
-    updatePagination();
-  }
-
-  const searchForm = document.querySelector('.search-form');
-  searchForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const query = searchInput.value.trim();
-    filterArticles(query);
-
-    // Update the URL to include the search query as a parameter
-    const newURL = new URL(window.location.href);
-    newURL.searchParams.set('s', query);
-    history.replaceState(null, '', newURL);
-  });
-
+  // Event listener for "Next Page" button click
   const nextPageButton = document.getElementById('next-page-button');
   nextPageButton.addEventListener('click', () => {
-    if (currentPage < getTotalPages(filteredArticles)) {
+    if (currentPage < getTotalPages()) {
       currentPage++;
       updatePagination();
     }
   });
 
+  // Event listener for "Previous Page" button click
   const previousPageButton = document.getElementById('previous-page-button');
   previousPageButton.addEventListener('click', () => {
     if (currentPage > 1) {
@@ -118,13 +97,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Check if there's a search query parameter in the URL on page load
-  const searchParams = new URLSearchParams(window.location.search);
-  const searchQuery = searchParams.get('s');
-  if (searchQuery) {
-    searchInput.value = searchQuery;
-    filterArticles(searchQuery);
-  } else {
-    updatePagination(); // Show initial pagination
+  // Callback function for page change
+  function onPageChange(page) {
+    // Access the newly created page here
+    console.log(`Accessing page ${page}`);
   }
+
+  // Usage example
+  updatePagination();
 });

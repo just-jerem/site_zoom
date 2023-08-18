@@ -2117,7 +2117,7 @@ p {
  }
  
  .search-wrap .search-form::after {
-	 content: "Press Enter to begin your search.";
+	 content: "Appuyez sur la touche Entrée pour rechercher";
 	 display: block;
 	 letter-spacing: 0.6px;
 	 font-size: 1.6rem;
