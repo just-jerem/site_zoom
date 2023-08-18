@@ -1139,9 +1139,9 @@ p {
  
  /* masonry entries - (_common-styles.scss)
   * ------------------------------------------------------------------- */
- .bricks-wrapper .entry {
-	 margin-bottom: 40px;
- }
+  .bricks-wrapper .entry {
+	margin-bottom: 40px;
+  }
  
  .bricks-wrapper .entry-thumb,
  .bricks-wrapper .entry-text {
@@ -1604,8 +1604,7 @@ p {
   * ------------------------------------------------------------------- */
  header {
 	 width: 100%;
-	 background: #DBDBDB url(../images/escheresque_@2X.png) repeat;
-	 background-size: 46px 29px;
+	 background: #48f84280;
 	 height: 130px;
 	 border-bottom: 1px solid #E5E5E5;
  }
@@ -1645,10 +1644,10 @@ p {
 	 padding: 0;
 	 outline: 0;
 	 border: none;
-	 width: 60px;
-	 height: 60px;
+	 width: 150px;
+	 height: 150px;
 	 background: url("../images/logo.png") no-repeat center;
-	 background-size: 60px 60px;
+	 background-size: 150px 150px;
 	 font: 0/0 a;
 	 text-shadow: none;
 	 color: transparent;
@@ -1662,7 +1661,14 @@ p {
  /* responsive:
   * header logo
   * ------------------------------------------------------------------- */
- @media only screen and (max-width:768px) {
+  @media only screen and (min-width:768px) {
+	header .logo {
+		left: 45px;
+	}
+
+}
+ 
+  @media only screen and (max-width:768px) {
 	 header .logo {
 		 left: 45px;
 	 }
