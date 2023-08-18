@@ -121,7 +121,7 @@
 				<form role="search" method="get" class="search-form" action="/category.html">
 					<label>
 						<span class="hide-content">Search for:</span>
-						<input type="search" class="search-field" id="search-input" placeholder="Type Your Keywords" value="" name="s"
+						<input type="search" class="search-field" id="search-input" placeholder="Entrez vos mots clés" value="" name="s"
 							title="Search for:" autocomplete="off">
 					</label>
 					<input type="submit" class="search-submit" value="Search">
