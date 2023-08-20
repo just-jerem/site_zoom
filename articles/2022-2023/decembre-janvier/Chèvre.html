@@ -46,7 +46,7 @@
 
 		<div class="row header-content">
 
-			<?php
+		<?php
     // Include the menu
     include '../../../menu.php';
 
@@ -66,19 +66,19 @@
     }
     ?>
 
-			<!-- Modify the links in the menu using the $menuDirectory variable -->
-			<script>
-				document.addEventListener('DOMContentLoaded', function () {
-					const menuLinks = document.querySelectorAll('#main-nav-wrap a');
-					const menuDirectory = '<?php echo $menuDirectory; ?>';
+    <!-- Modify the links in the menu using the $menuDirectory variable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+            const menuDirectory = '<?php echo $menuDirectory; ?>';
 
-					for (const link of menuLinks) {
-						link.href = makeAbsoluteUrl(link.href, menuDirectory);
-					}
-				});
-			</script>
+            for (const link of menuLinks) {
+                link.href = makeAbsoluteUrl(link.href, menuDirectory);
+            }
+        });
+    </script>
 
-
+			
 
 		</div>
 
@@ -93,55 +93,75 @@
 
 				<article class="format-standard">
 
-					<div class="content-media">
+					<div class="content-media" style="position:relative;">
 						<div class="post-thumb">
-							<img src="../../../images/articles/fevrier/frog-14960811981J3.jpg">
+							<img src="../../../images/articles/jan-dec2023/goatnoel.jpg">
+						</div>
+						<div class="logocam">
+							<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+									src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i style="position:absolute; margin-left:2px; padding-top:6.5px;"><a style="color:inherit;" href="https://www.instagram.com/jerome.eno">Jerome
+										Eno</i></a></p>
 						</div>
 					</div>
 
 					<div class="primary-content">
-
-						<h1 class="page-title">La Grenouille Arboricole aux yeux Rouges</h1>
-
 						<ul class="entry-meta">
-							<li class="date">Février 2022</li>
-							<li class="cat"><a href="">Nature</a><a href="">Grenouille</a></a></li>
+							<h1 class="page-title">Noël, pour les chèvres aussi c'est la fête</h1>
+							<li class="cat"><a href="">noël</a><a href="">animaux</a></li>
 						</ul>
 
-						<p>
-							<li style="list-style:none;"><strong>Nom commun</strong> : grenouille arboricole aux yeux
-								rouges</li>
-							<li style="list-style:none;"><strong>Nom scientifique</strong> : Agalychnis callidryas</li>
-							<li style="list-style:none;"><strong>Espèce</strong> : Phyllomedusidae</li>
-							<li style="list-style:none;"><strong>Répartition</strong> : surtout présente sur la côte de
-								la mer des Caraïbes</li>
-							<li style="list-style:none;"><strong>Taille maximum</strong> : 59mm pour les mâles et 77mm
-								pour les femelles</li>
+						<p class="lead">Sapin de Noël naturel ou artificiel ? Que faites-vous de votre sapin usagé après
+							les fêtes ? Une fois les décorations rangées, il est temps pour certains de se séparer de
+							leur sapin.</p>
+
+						<p class="drop-cap">Plutôt que de le jeter à la déchèterie ou dans la rue (ce qui est illégal),
+							une solution bien plus écologique a été proposée par les agriculteurs : recycler ces mêmes
+							sapins naturels qui auraient ordinairement été brûlés, en émettant du CO2... ce qui n'est
+							pas très bon pour la planète… pour les donner à manger aux chèvres, de façon plus
+							écoresponsable.
 						</p>
 
-						<p class="lead">Les Supers pouvoirs :</p>
-						<p>En cas d’attaque, elle ouvre ses yeux au maximum afin de les rendre plus impressionnants.
-							Profitant de l’effet de surprise du prédateur, elle se propulse alors de toutes ses forces 
-							en un bond pouvant facilement atteindre un mètre de long.</p>
+						<p>Vous pouvez en effet en faire don à des fermes ou à des points de collectes. Ainsi, pas de
+							gaspillage, et un joli cadeau post-Noël pour les chèvres. Les épines des sapins ont de
+							nombreux bienfaits : elles servent de compléments alimentaires riches en oligo-éléments, en
+							vitamines C et D (qui ont tendance à manquer aux chèvres l'hiver pour leur croissance) mais
+							ont également des propriétés vermifuges. </p>
 
-						<p class="lead">Un peu de Culture</p>
-						<p>Le mot « grenouille » est déjà présent dans les dictionnaires de français anciens en
-							1606.Elles font partit de la classe des amphibiens. Leurs tailles varient de 4 à 5 cm. Leurs
-							petits, les têtards, sont herbivores tandis que les grenouilles sont omnivores.</p>
+						<p class="drop-cap">Elles pallient par ailleurs le manque de foin et plus généralement de
+							nourriture l'hiver. Un repas gastronomique, digne des plus grands restaurants ! Et surtout,
+							plus sain que nos menus de fêtes. Cependant, leur consommation est interdite aux femelles en
+							pleine gestation, car elle peut provoquer des fausses couches. Surtout, n'oubliez pas de
+							retirer vos décorations de Noël. Pas sûr que le palais délicat des chèvres apprécie… La
+							neige artificielle aussi est à éviter. À la fin, tout est mangé. Les chèvres font honneur au
+							repas. Il n’y a pas de gaspillage. Il ne reste plus que le tronc, qui peut alors servir
+							comme combustible pour se chauffer.</p>
+
+
+						<p class="lead">L’année prochaine, c’est à vous de jouer ! Pourquoi ne pas offrir à votre tour
+							votre sapin de Noël aux chèvres pour une transition écologique plus durable ?</p>
+
+						<a
+							href="https://ici.radio-canada.ca/nouvelle/1144951/recyclage-ecologie-sapin-chevre-noel-alternative" style="color:inherit;"><i style="font-size:small;">source
+							:
+							https://ici.radio-canada.ca/nouvelle/1144951/recyclage-ecologie-sapin-chevre-noel-alternative</i></a>
 
 						<p class="tags">
 							<span>Tags :</span>
-							<a href="#">animaux</a><a href="#">carte d'identité du mois</a><a href="#">chose</a><a
-								href="#"></a>
+							<a href="#">noël</a><a href="#">animaux</a>
 						</p>
+
+
 
 						<div class="author-profile">
 							<img src="../../../images/avatars/user-05.jpg" alt="">
 
 							<div class="about">
-								<h4><a href="#">?</a></h4>
+								<h4><a href="#">Elisa</a></h4>
 
-								<p>A rajouter</p>
+								<p>Alias aperiam at debitis deserunt dignissimos dolorem doloribus, fuga fugiat impedit
+									laudantium magni maxime nihil nisi quidem quisquam sed ullam voluptas voluptatum.
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								</p>
 
 								<ul class="author-social">
 									<li><a href="#">Facebook</a></li>
@@ -153,15 +173,6 @@
 						</div> <!-- end author-profile -->
 
 					</div> <!-- end entry-primary -->
-
-					<div class="pagenav group">
-						<div class="next-nav">
-							<a href="Chiffre_du_Mois.html" rel="next">
-								<span>Suivant</span>
-								Chiffre du Mois
-							</a>
-						</div>
-					</div>
 
 				</article>
 

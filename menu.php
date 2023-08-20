@@ -52,7 +52,8 @@
 						<li><a href="/articles/2022-2023/avril-mai/Chiffre_du_Mois.html">Le Chiffre</a></li>
 						<li><a href="/articles/2022-2023/avril-mai/Actu_Insolite.html">Actu insolite</a></li>
 						<li><a href="/articles/2022-2023/avril-mai/Dessins_Naturalistes.html">Dessins naturalistes</a></li>
-						<li><a href="/">James Webb Space Telescope (JWST) </a></li>
+						<li><a href="/articles/2022-2023/avril-mai/Fusée_3D.html">Une Fusée Imprimée en 3D</a></li>
+						<li><a href="/articles/2022-2023/avril-mai/Nouvelles_technologies_du_Cinéma.html">Les Nouvelles Technologies et le Cinéma</a></li>						
 					</ul>
 				</li>
 			</ul>

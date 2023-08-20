@@ -46,7 +46,7 @@
 
 		<div class="row header-content">
 
-		<?php
+			<?php
     // Include the menu
     include '../../../menu.php';
 
@@ -66,19 +66,19 @@
     }
     ?>
 
-    <!-- Modify the links in the menu using the $menuDirectory variable -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
-            const menuDirectory = '<?php echo $menuDirectory; ?>';
+			<!-- Modify the links in the menu using the $menuDirectory variable -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+					const menuDirectory = '<?php echo $menuDirectory; ?>';
 
-            for (const link of menuLinks) {
-                link.href = makeAbsoluteUrl(link.href, menuDirectory);
-            }
-        });
-    </script>
+					for (const link of menuLinks) {
+						link.href = makeAbsoluteUrl(link.href, menuDirectory);
+					}
+				});
+			</script>
 
-			
+
 
 		</div>
 
@@ -99,8 +99,9 @@
 						</div>
 						<div class="logocam">
 							<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
-								src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><span style="position:absolute; margin-left:2px; padding-top:6.5px;"><i>Dominique
-								Andreas Martin</i></span></p>
+									src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><span
+									style="position:absolute; margin-left:2px; padding-top:6.5px;"><i>Dominique
+										Andreas Martin</i></span></p>
 						</div>
 					</div>
 
@@ -118,8 +119,7 @@
 							feuilles reliées par des fils de soie.</p>
 
 						<p>Les grenouilles s'y abritent en pensant se protéger du soleil alors que c'est un
-							piège mortel.
-						</p>
+							piège mortel.</p>
 
 						<p class="tags">
 							<span>Tags :</span>
