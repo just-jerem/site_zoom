@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Zoom sur les Sciences</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/vendor.css">
+	<link rel="stylesheet" href="../../../css/main.css">
+
+
+	<!-- script
+   ================================================== -->
+	<script src="../../../js/modernizr.js"></script>
+	<script src="../../../js/pace.min.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+	<header class="short-header">
+
+		<div class="gradient-block"></div>
+
+		<div class="row header-content">
+
+		<?php
+    // Include the menu
+    include '../../../menu.php';
+
+    // Get the current URL of the executing script
+    $currentUrl = $_SERVER['PHP_SELF'];
+
+    // Extract the directory path from the URL
+    $menuDirectory = rtrim(dirname($currentUrl), '/'); // Remove trailing slashes
+
+    // Function to convert relative URLs to absolute URLs based on the menu directory
+    function makeAbsoluteUrl($url, $menuDir) {
+        if (strpos($url, '/') === 0) {
+            return $url; // URL is already absolute
+        } else {
+            return $menuDir . '/' . $url;
+        }
+    }
+    ?>
+
+    <!-- Modify the links in the menu using the $menuDirectory variable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+            const menuDirectory = '<?php echo $menuDirectory; ?>';
+
+            for (const link of menuLinks) {
+                link.href = makeAbsoluteUrl(link.href, menuDirectory);
+            }
+        });
+    </script>
+
+			
+
+		</div>
+
+	</header> <!-- end header -->
+
+
+	<!-- content
+   ================================================== -->
+	<section id="content-wrap" class="blog-single">
+		<div class="row">
+			<div class="col-twelve">
+
+				<article class="format-standard">
+
+					<div class="content-media">
+						<div class="post-thumb vers">
+							<img style="margin-top: 6%;" src="../../../images/articles/fev-mars2023/vdt04.jpg">
+						</div>
+						<div class="logocam vers">
+							<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+									src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i style="position:absolute; margin-left:2px; padding-top:6.5px;"><a style="color:inherit;">Reproduction de deux Vers de terre © Sébastien TURPIN</i></a></p>
+						</div>
+					</div>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">Il ou Elle ? Telle est la question ?</h1>
+
+						<ul class="entry-meta">
+							<li class="date">Février-Mars 2023</li>
+							<li class="cat"><a href="">Animaux</a>
+						</ul>
+
+						<p class="lead">En effet, de nombreuses espèces sont dites hermaphrodites, c’est-à-dire qu’elles possèdent les attributs mâles et femelles simultanément ou non.</p>
+
+						<p class="drop-cap">Parmi les plus connues, nous avons les escargots, les coquilles Saint-Jacques, les poissons-clown (eh oui, est-ce Némo ou Némette ?), les grenouilles, et bien d’autres, dont les vers de terre. Eh oui, les vers de terre sont hermaphrodites. Chaque ver possède des testicules et des ovaires. Quand ils sont prêts à s’accoupler, leur clitellum* passe du rose à l'orangé. Ils cherchent alors un congénère et s'accouplent. Durant cette phase de la reproduction, les deux vers se collent entre eux par le clitellum et les vésicules séminales (le clitelum de l’un se colle aux vésicules séminales de l’autre et vice versa). Ils produisent alors des spermatozoïdes et les transmettent à l'autre qui les stockera dans ses vésicules séminales.</p>
+
+						<p><a href="#clitellum" class="liemimg smoothscroll">Le clitellum</a> produit ensuite un cocon qui va se déplacer vers l'avant de l'animal au niveau des ovaires pour leur "passer le message" de produire des ovules et récupérer ceux-ci.</p>
+
+						<p class="drop-cap">Le cocon passe ensuite récupérer les spermatozoïdes dans les vésicules séminales pour féconder les ovules. Ensuite le cocon se détache et se referme, il faudra alors plusieurs semaines voir plusieurs mois suivant l'espèce pour que les jeunes vers de terres éclosent.</p>
+
+						<p class="lead">Le ver de terre commun (Lumbricus terrestris) s'accouple 1 fois par an en formant 5 à 10 cocons qui contiennent chacun 1 œuf. Ils vivent 4 à 8 ans, donc relativement  "longtemps" d’où ce petit nombre de cocons produits à chaque fois . A titre de comparaison, le ver de terre Eisenia foetida s'accouple plus souvent et forme 140 cocons par an, chacun contenant plusieurs œufs mais ceux-ci ne  vivent pas plus d'1 à 2 ans.</p>
+
+						<p id="clitellum" style="opacity:0.5;">1 / Le point de solidification correspond à la température
+                            nécessaire à une substance pour qu'elle passe d'un état liquide à un état solide. Pour l'eau
+                            il est à 0°c (un peu plus bas pour l'eau de mer). </p>
+
+							<ul>Sources :
+								<li style="list-style:none;"><a href="https://www.vigienature-ecole.fr/node/128
+									" style="color:inherit;"><i> https://www.vigienature-ecole.fr/node/128
+									</i></a></li>
+									<li style="list-style:none;"><a href="https://www.naturewatch.ca/wormwatch/fr/comment-surveiller/ecologiereproduction/
+										" style="color:inherit;"><i> https://www.naturewatch.ca/wormwatch/fr/comment-surveiller/ecologiereproduction/
+										</i></a></li>
+							</ul>
+						
+						<p class="tags">
+							<span>Tags in :</span>
+							<a href="#">animaux</a>
+						</p>
+
+						<?php include '../../../avatars/emma.php'; ?>
+
+					</div> <!-- end entry-primary -->
+
+				</article>
+
+			<?php include '../../../footer.php'; ?>
+
+		<div id="preloader">
+			<div id="loader"></div>
+		</div>
+
+		<!-- Java Script
+   ================================================== -->
+		<script src="../../../js/jquery-2.1.3.min.js"></script>
+		<script src="../../../js/plugins.js"></script>
+		<script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

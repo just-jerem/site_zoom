@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const articlesPerPage = 8;
-  const masonryContainer = document.querySelector('.bricks-wrapper');
-  const articles = [...document.querySelectorAll('.brick')];
-  const searchInput = document.querySelector('.search-field');
-  const searchError = document.querySelector('.search-error');
-  const articlesContainer = document.querySelector('.articles-container'); // Container for articles
+document.addEventListener("DOMContentLoaded", function () {
+  const articlesPerPage = 6;
+  const masonryContainer = document.querySelector(".bricks-wrapper");
+  const articles = [...document.querySelectorAll(".brick")];
+  const searchInput = document.querySelector(".search-field");
+  const searchError = document.querySelector(".search-error");
+  const articlesContainer = document.querySelector(".articles-container"); // Container for articles
 
   let filteredArticles = articles.slice();
   let currentPage = 1;
@@ -23,33 +23,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const endIndex = currentPage * articlesPerPage;
     const visibleArticles = filteredArticles.slice(startIndex, endIndex);
 
-    articles.forEach(article => {
-      article.style.display = 'none';
+    articles.forEach((article) => {
+      article.style.display = "none";
     });
 
-    visibleArticles.forEach(article => {
-      article.style.display = 'block';
+    visibleArticles.forEach((article) => {
+      article.style.display = "block";
     });
 
-    const paginationContainer = document.getElementById('pagination-container');
-    paginationContainer.innerHTML = '';
+    const paginationContainer = document.getElementById("pagination-container");
+    paginationContainer.innerHTML = "";
 
     for (let i = 1; i <= totalPages; i++) {
-      const button = document.createElement('button');
+      const button = document.createElement("button");
       button.textContent = i.toString();
-      button.addEventListener('click', () => {
+      button.addEventListener("click", () => {
         goToPage(i);
       });
 
       if (i === currentPage) {
-        button.classList.add('active');
+        button.classList.add("active");
       }
 
       paginationContainer.appendChild(button);
     }
 
-    const previousPageButton = document.getElementById('previous-page-button');
-    const nextPageButton = document.getElementById('next-page-button');
+    const previousPageButton = document.getElementById("previous-page-button");
+    const nextPageButton = document.getElementById("next-page-button");
 
     previousPageButton.disabled = currentPage === 1;
     nextPageButton.disabled = currentPage === totalPages;
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
       masonry.layout();
     } else {
       masonry = new Masonry(masonryContainer, {
-        itemSelector: '.brick',
-        columnWidth: '.grid-sizer',
+        itemSelector: ".brick",
+        columnWidth: ".grid-sizer",
         percentPosition: true,
         transitionDuration: 0,
       });
@@ -83,37 +83,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function filterArticles(query) {
     const lowerCaseQuery = query.toLowerCase();
-    filteredArticles = articles.filter(article => article.textContent.toLowerCase().includes(lowerCaseQuery));
+    filteredArticles = articles.filter((article) =>
+      article.textContent.toLowerCase().includes(lowerCaseQuery),
+    );
 
-    searchError.style.display = filteredArticles.length > 0 ? 'none' : 'block';
+    searchError.style.display = filteredArticles.length > 0 ? "none" : "block";
 
     updatePagination();
   }
 
-  const searchForm = document.querySelector('.search-form');
-  searchForm.addEventListener('submit', function(event) {
-    console.log('Form submitted'); // Add this line
-    
+  const searchForm = document.querySelector(".search-form");
+  searchForm.addEventListener("submit", function (event) {
+    console.log("Form submitted"); // Add this line
+
     event.preventDefault();
     const query = searchInput.value.trim();
     filterArticles(query);
 
     // Update the URL to include the search query as a parameter
     const newURL = new URL(window.location.href);
-    newURL.searchParams.set('s', query);
-    history.replaceState(null, '', newURL);
+    newURL.searchParams.set("s", query);
+    history.replaceState(null, "", newURL);
   });
 
-  const nextPageButton = document.getElementById('next-page-button');
-  nextPageButton.addEventListener('click', () => {
+  const nextPageButton = document.getElementById("next-page-button");
+  nextPageButton.addEventListener("click", () => {
     if (currentPage < getTotalPages(filteredArticles)) {
       currentPage++;
       updatePagination();
     }
   });
 
-  const previousPageButton = document.getElementById('previous-page-button');
-  previousPageButton.addEventListener('click', () => {
+  const previousPageButton = document.getElementById("previous-page-button");
+  previousPageButton.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
       updatePagination();
@@ -122,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Check if there's a search query parameter in the URL on page load
   const searchParams = new URLSearchParams(window.location.search);
-  const searchQuery = searchParams.get('s');
+  const searchQuery = searchParams.get("s");
   if (searchQuery) {
     searchInput.value = searchQuery;
     filterArticles(searchQuery);

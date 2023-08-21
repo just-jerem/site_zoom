@@ -31,19 +31,27 @@
   animation-duration: 2s;
 }
 
-.animated.bounceIn, .animated.bounceOut, .animated.flipOutX, .animated.flipOutY {
-  -webkit-animation-duration: .75s;
-  animation-duration: .75s;
+.animated.bounceIn,
+.animated.bounceOut,
+.animated.flipOutX,
+.animated.flipOutY {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
 }
 
 @-webkit-keyframes bounce {
-  20%,53%,80%,from,to {
+  20%,
+  53%,
+  80%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  40%,43% {
+  40%,
+  43% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     -webkit-transform: translate3d(0, -30px, 0);
@@ -61,13 +69,18 @@
   }
 }
 @keyframes bounce {
-  20%,53%,80%,from,to {
+  20%,
+  53%,
+  80%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  40%,43% {
+  40%,
+  43% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     -webkit-transform: translate3d(0, -30px, 0);
@@ -92,18 +105,24 @@
 }
 
 @-webkit-keyframes flash {
-  50%,from,to {
+  50%,
+  from,
+  to {
     opacity: 1;
   }
-  25%,75% {
+  25%,
+  75% {
     opacity: 0;
   }
 }
 @keyframes flash {
-  50%,from,to {
+  50%,
+  from,
+  to {
     opacity: 1;
   }
-  25%,75% {
+  25%,
+  75% {
     opacity: 0;
   }
 }
@@ -211,29 +230,45 @@
 }
 
 @-webkit-keyframes shake {
-  from,to {
+  from,
+  to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  10%,30%,50%,70%,90% {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
-  20%,40%,60%,80% {
+  20%,
+  40%,
+  60%,
+  80% {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
   }
 }
 @keyframes shake {
-  from,to {
+  from,
+  to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  10%,30%,50%,70%,90% {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
-  20%,40%,60%,80% {
+  20%,
+  40%,
+  60%,
+  80% {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
   }
@@ -299,15 +334,21 @@
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-  10%,20% {
+  10%,
+  20% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-  30%,50%,70%,90% {
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-  40%,60%,80% {
+  40%,
+  60%,
+  80% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
@@ -321,15 +362,21 @@
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-  10%,20% {
+  10%,
+  20% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-  30%,50%,70%,90% {
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-  40%,60%,80% {
+  40%,
+  60%,
+  80% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
@@ -409,7 +456,9 @@
 }
 
 @-webkit-keyframes jello {
-  11.1%,from,to {
+  11.1%,
+  from,
+  to {
     -webkit-transform: none;
     transform: none;
   }
@@ -443,7 +492,9 @@
   }
 }
 @keyframes jello {
-  11.1%,from,to {
+  11.1%,
+  from,
+  to {
     -webkit-transform: none;
     transform: none;
   }
@@ -484,7 +535,12 @@
 }
 
 @-webkit-keyframes bounceIn {
-  20%,40%,60%,80%,from,to {
+  20%,
+  40%,
+  60%,
+  80%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -517,7 +573,12 @@
   }
 }
 @keyframes bounceIn {
-  20%,40%,60%,80%,from,to {
+  20%,
+  40%,
+  60%,
+  80%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -555,7 +616,11 @@
 }
 
 @-webkit-keyframes bounceInDown {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -583,7 +648,11 @@
   }
 }
 @keyframes bounceInDown {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -616,7 +685,11 @@
 }
 
 @-webkit-keyframes bounceInLeft {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -644,7 +717,11 @@
   }
 }
 @keyframes bounceInLeft {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -677,7 +754,11 @@
 }
 
 @-webkit-keyframes bounceInRight {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -705,7 +786,11 @@
   }
 }
 @keyframes bounceInRight {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -738,7 +823,11 @@
 }
 
 @-webkit-keyframes bounceInUp {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -766,7 +855,11 @@
   }
 }
 @keyframes bounceInUp {
-  60%,75%,90%,from,to {
+  60%,
+  75%,
+  90%,
+  from,
+  to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -803,7 +896,8 @@
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9);
   }
-  50%,55% {
+  50%,
+  55% {
     opacity: 1;
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
     transform: scale3d(1.1, 1.1, 1.1);
@@ -819,7 +913,8 @@
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
     transform: scale3d(0.9, 0.9, 0.9);
   }
-  50%,55% {
+  50%,
+  55% {
     opacity: 1;
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
     transform: scale3d(1.1, 1.1, 1.1);
@@ -840,7 +935,8 @@
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
-  40%,45% {
+  40%,
+  45% {
     opacity: 1;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
@@ -856,7 +952,8 @@
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
-  40%,45% {
+  40%,
+  45% {
     opacity: 1;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
@@ -935,7 +1032,8 @@
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
   }
-  40%,45% {
+  40%,
+  45% {
     opacity: 1;
     -webkit-transform: translate3d(0, 20px, 0);
     transform: translate3d(0, 20px, 0);
@@ -951,7 +1049,8 @@
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
   }
-  40%,45% {
+  40%,
+  45% {
     opacity: 1;
     -webkit-transform: translate3d(0, 20px, 0);
     transform: translate3d(0, 20px, 0);
@@ -1449,14 +1548,18 @@
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -190deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -170deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
@@ -1481,14 +1584,18 @@
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -190deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px)
+      rotate3d(0, 1, 0, -170deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
@@ -2151,7 +2258,8 @@
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
-  20%,60% {
+  20%,
+  60% {
     -webkit-transform: rotate3d(0, 0, 1, 80deg);
     transform: rotate3d(0, 0, 1, 80deg);
     -webkit-transform-origin: top left;
@@ -2159,7 +2267,8 @@
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
-  40%,80% {
+  40%,
+  80% {
     -webkit-transform: rotate3d(0, 0, 1, 60deg);
     transform: rotate3d(0, 0, 1, 60deg);
     -webkit-transform-origin: top left;
@@ -2181,7 +2290,8 @@
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
-  20%,60% {
+  20%,
+  60% {
     -webkit-transform: rotate3d(0, 0, 1, 80deg);
     transform: rotate3d(0, 0, 1, 80deg);
     -webkit-transform-origin: top left;
@@ -2189,7 +2299,8 @@
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
-  40%,80% {
+  40%,
+  80% {
     -webkit-transform: rotate3d(0, 0, 1, 60deg);
     transform: rotate3d(0, 0, 1, 60deg);
     -webkit-transform-origin: top left;
@@ -2831,7 +2942,6 @@
   animation-name: slideOutUp;
 }
 
-
 /**
  * jQuery FlexSlider v2.5.0
  * http://www.woothemes.com/flexslider/
@@ -2902,7 +3012,6 @@ html[xmlns] .flexslider .slides {
   display: block;
 }
 
-
 /**
  * MediaElementjs
  * 
@@ -2929,7 +3038,8 @@ html[xmlns] .flexslider .slides {
   text-indent: 0;
 }
 
-.mejs-fill-container, .mejs-fill-container .mejs-container {
+.mejs-fill-container,
+.mejs-fill-container .mejs-container {
   width: 100%;
   height: 100%;
 }
@@ -2946,7 +3056,8 @@ html[xmlns] .flexslider .slides {
   position: absolute;
 }
 
-.mejs-embed, .mejs-embed body {
+.mejs-embed,
+.mejs-embed body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -3052,11 +3163,33 @@ html[xmlns] .flexslider .slides {
   background: #333;
   background: url(background.png);
   background: rgba(0, 0, 0, 0.9);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.9)), to(rgba(0, 0, 0, 0.9)));
-  background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
-  background: -moz-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
-  background: -o-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
-  background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(50, 50, 50, 0.9)),
+    to(rgba(0, 0, 0, 0.9))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.9),
+    rgba(0, 0, 0, 0.9)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.9),
+    rgba(0, 0, 0, 0.9)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.9),
+    rgba(0, 0, 0, 0.9)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.9),
+    rgba(0, 0, 0, 0.9)
+  );
   background: linear-gradient(rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
 }
 
@@ -3078,11 +3211,33 @@ html[xmlns] .flexslider .slides {
   left: 0;
   background: url(background.png);
   background: rgba(0, 0, 0, 0.7);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.7)), to(rgba(0, 0, 0, 0.7)));
-  background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
-  background: -moz-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
-  background: -o-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
-  background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(50, 50, 50, 0.7)),
+    to(rgba(0, 0, 0, 0.7))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
   background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
   height: 30px;
   width: 100%;
@@ -3174,7 +3329,8 @@ html[xmlns] .flexslider .slides {
   padding-top: 5px;
 }
 
-.mejs-controls .mejs-time-rail span, .mejs-controls .mejs-time-rail a {
+.mejs-controls .mejs-time-rail span,
+.mejs-controls .mejs-time-rail a {
   display: block;
   position: absolute;
   width: 180px;
@@ -3189,22 +3345,100 @@ html[xmlns] .flexslider .slides {
   margin: 5px;
   background: #333;
   background: rgba(50, 50, 50, 0.8);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(60, 60, 60, 0.8)));
-  background: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
-  background: -moz-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
-  background: -o-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
-  background: -ms-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(30, 30, 30, 0.8)),
+    to(rgba(60, 60, 60, 0.8))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
   background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-buffering {
   width: 100%;
-  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-image: -webkit-gradient(
+    linear,
+    0 100%,
+    100% 0,
+    color-stop(0.25, rgba(255, 255, 255, 0.15)),
+    color-stop(0.25, transparent),
+    color-stop(0.5, transparent),
+    color-stop(0.5, rgba(255, 255, 255, 0.15)),
+    color-stop(0.75, rgba(255, 255, 255, 0.15)),
+    color-stop(0.75, transparent),
+    to(transparent)
+  );
+  background-image: -webkit-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-image: -moz-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
   -webkit-background-size: 15px 15px;
   -moz-background-size: 15px 15px;
   -o-background-size: 15px 15px;
@@ -3259,11 +3493,33 @@ html[xmlns] .flexslider .slides {
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
   background: #3caac8;
   background: rgba(60, 170, 200, 0.8);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(44, 124, 145, 0.8)), to(rgba(78, 183, 212, 0.8)));
-  background: -webkit-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
-  background: -moz-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
-  background: -o-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
-  background: -ms-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(44, 124, 145, 0.8)),
+    to(rgba(78, 183, 212, 0.8))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(44, 124, 145, 0.8),
+    rgba(78, 183, 212, 0.8)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(44, 124, 145, 0.8),
+    rgba(78, 183, 212, 0.8)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(44, 124, 145, 0.8),
+    rgba(78, 183, 212, 0.8)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(44, 124, 145, 0.8),
+    rgba(78, 183, 212, 0.8)
+  );
   background: linear-gradient(rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
   width: 0;
 }
@@ -3271,12 +3527,37 @@ html[xmlns] .flexslider .slides {
 .mejs-controls .mejs-time-rail .mejs-time-current {
   background: #fff;
   background: rgba(255, 255, 255, 0.8);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.9)), to(rgba(200, 200, 200, 0.8)));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(255, 255, 255, 0.9)),
+    to(rgba(200, 200, 200, 0.8))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
   width: 0;
 }
 
@@ -3460,11 +3741,33 @@ html[xmlns] .flexslider .slides {
   border-radius: 2px;
   background: #333;
   background: rgba(50, 50, 50, 0.8);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(60, 60, 60, 0.8)));
-  background: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
-  background: -moz-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
-  background: -o-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
-  background: -ms-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(30, 30, 30, 0.8)),
+    to(rgba(60, 60, 60, 0.8))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(30, 30, 30, 0.8),
+    rgba(60, 60, 60, 0.8)
+  );
   background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
 }
 
@@ -3482,12 +3785,37 @@ html[xmlns] .flexslider .slides {
   border-radius: 2px;
   background: #fff;
   background: rgba(255, 255, 255, 0.8);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.9)), to(rgba(200, 200, 200, 0.8)));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(255, 255, 255, 0.9)),
+    to(rgba(200, 200, 200, 0.8))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(200, 200, 200, 0.8)
+  );
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
@@ -3576,11 +3904,33 @@ html[xmlns] .flexslider .slides {
   float: left;
   background: #222;
   background: rgba(0, 0, 0, 0.7);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.7)), to(rgba(0, 0, 0, 0.7)));
-  background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
-  background: -moz-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
-  background: -o-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
-  background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(50, 50, 50, 0.7)),
+    to(rgba(0, 0, 0, 0.7))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(50, 50, 50, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
   background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232,endColorstr=#000000);
   overflow: hidden;
@@ -3604,11 +3954,33 @@ html[xmlns] .flexslider .slides {
 .mejs-chapters .mejs-chapter .mejs-chapter-block:hover {
   background: #666;
   background: rgba(102, 102, 102, 0.7);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(102, 102, 102, 0.7)), to(rgba(50, 50, 50, 0.6)));
-  background: -webkit-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
-  background: -moz-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
-  background: -o-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
-  background: -ms-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(102, 102, 102, 0.7)),
+    to(rgba(50, 50, 50, 0.6))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(102, 102, 102, 0.7),
+    rgba(50, 50, 50, 0.6)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(102, 102, 102, 0.7),
+    rgba(50, 50, 50, 0.6)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(102, 102, 102, 0.7),
+    rgba(50, 50, 50, 0.6)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(102, 102, 102, 0.7),
+    rgba(50, 50, 50, 0.6)
+  );
   background: linear-gradient(rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232);
 }
@@ -3647,7 +4019,7 @@ html[xmlns] .flexslider .slides {
   text-decoration: underline;
 }
 
-.mejs-captions-layer[lang=ar] {
+.mejs-captions-layer[lang="ar"] {
   font-size: 20px;
   font-weight: normal;
 }
@@ -3739,7 +4111,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .mejs-contextmenu .mejs-contextmenu-item:hover {
-  background: #2C7C91;
+  background: #2c7c91;
   color: #fff;
 }
 
@@ -3786,13 +4158,23 @@ html[xmlns] .flexslider .slides {
   overflow: hidden;
 }
 
-.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input {
+.mejs-controls
+  .mejs-sourcechooser-button
+  .mejs-sourcechooser-selector
+  ul
+  li
+  input {
   clear: both;
   float: left;
   margin: 3px 3px 0 5px;
 }
 
-.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label {
+.mejs-controls
+  .mejs-sourcechooser-button
+  .mejs-sourcechooser-selector
+  ul
+  li
+  label {
   width: 100px;
   float: left;
   padding: 4px 0 0 0;
@@ -3868,7 +4250,12 @@ div.mejs-speed-button {
   display: block;
 }
 
-.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected {
+.mejs-controls
+  .mejs-speed-button
+  .mejs-speed-selector
+  ul
+  li
+  label.mejs-speed-selected {
   color: #21f8f8;
 }
 
@@ -3941,8 +4328,6 @@ div.mejs-speed-button {
   color: #ffffff;
 }
 
-
-
 /* End: Skip Back */
 /*! Lity - v1.6.6 - 2016-04-22
  * http://sorgalla.com/lity/
@@ -3992,7 +4377,7 @@ div.mejs-speed-button {
 }
 
 .lity-wrap:before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
@@ -4052,7 +4437,7 @@ div.mejs-speed-button {
 }
 
 .lity-content:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -4092,7 +4477,8 @@ div.mejs-speed-button {
   text-shadow: none;
   color: transparent;
 }
-.lity-close::before, .lity-close::after {
+.lity-close::before,
+.lity-close::after {
   display: block;
   content: "";
   height: 20px;
@@ -4139,14 +4525,15 @@ div.mejs-speed-button {
   text-shadow: none;
   color: transparent;
 }
-.lity-close:hover::before, .lity-close:hover::after,
+.lity-close:hover::before,
+.lity-close:hover::after,
 .lity-close:focus::before,
 .lity-close:focus::after,
 .lity-close:active::before,
 .lity-close:active::after,
 .lity-close:visited::before,
 .lity-close:visited::after {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .lity-close:active {
@@ -4192,13 +4579,13 @@ div.mejs-speed-button {
   display: none;
 }
 
-
 /** 
  * prettyprint GitHub Theme 
  * =================================================================== */
 .prettyprint {
-  background: #EAEAEA;
-  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  background: #eaeaea;
+  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco,
+    Consolas, monospace;
   font-size: 12px;
   line-height: 1.5;
   border: none;
@@ -4289,7 +4676,9 @@ div.mejs-speed-button {
     color: #004444;
   }
 
-  .pun, .opn, .clo {
+  .pun,
+  .opn,
+  .clo {
     color: #444400;
   }
 

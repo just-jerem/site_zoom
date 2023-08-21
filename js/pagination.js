@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   const articlesPerPage = 6; // Maximum number of articles per page
-  const masonryContainer = document.querySelector('.bricks-wrapper');
-  const articles = [...document.querySelectorAll('.brick')]; // Array of <article> elements
+  const masonryContainer = document.querySelector(".bricks-wrapper");
+  const articles = [...document.querySelectorAll(".brick")]; // Array of <article> elements
 
   let currentPage = 1;
   let masonry; // Masonry instance
@@ -22,35 +22,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hide all articles
     articles.forEach((article) => {
-      article.style.display = 'none';
+      article.style.display = "none";
     });
 
     // Show visible articles
     visibleArticles.forEach((article) => {
-      article.style.display = 'block';
+      article.style.display = "block";
     });
 
     // Update pagination UI (e.g., active page indicator, disable/enable buttons)
-    const paginationContainer = document.getElementById('pagination-container');
-    paginationContainer.innerHTML = ''; // Clear previous buttons
+    const paginationContainer = document.getElementById("pagination-container");
+    paginationContainer.innerHTML = ""; // Clear previous buttons
 
     for (let i = 1; i <= totalPages; i++) {
-      const button = document.createElement('button');
+      const button = document.createElement("button");
       button.textContent = i.toString();
-      button.addEventListener('click', () => {
+      button.addEventListener("click", () => {
         goToPage(i);
       });
 
       if (i === currentPage) {
-        button.classList.add('active');
+        button.classList.add("active");
       }
 
       paginationContainer.appendChild(button);
     }
 
     // Update previous and next buttons
-    const previousPageButton = document.getElementById('previous-page-button');
-    const nextPageButton = document.getElementById('next-page-button');
+    const previousPageButton = document.getElementById("previous-page-button");
+    const nextPageButton = document.getElementById("next-page-button");
 
     previousPageButton.disabled = currentPage === 1;
     nextPageButton.disabled = currentPage === totalPages;
@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
       masonry.layout();
     } else {
       masonry = new Masonry(masonryContainer, {
-        itemSelector: '.brick',
-        columnWidth: '.grid-sizer',
+        itemSelector: ".brick",
+        columnWidth: ".grid-sizer",
         percentPosition: true,
         transitionDuration: 0,
       });
@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Event listener for "Next Page" button click
-  const nextPageButton = document.getElementById('next-page-button');
-  nextPageButton.addEventListener('click', () => {
+  const nextPageButton = document.getElementById("next-page-button");
+  nextPageButton.addEventListener("click", () => {
     if (currentPage < getTotalPages()) {
       currentPage++;
       updatePagination();
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Event listener for "Previous Page" button click
-  const previousPageButton = document.getElementById('previous-page-button');
-  previousPageButton.addEventListener('click', () => {
+  const previousPageButton = document.getElementById("previous-page-button");
+  previousPageButton.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
       updatePagination();

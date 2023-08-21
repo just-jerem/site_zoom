@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Zoom sur les Sciences</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/vendor.css">
+	<link rel="stylesheet" href="../../../css/main.css">
+
+
+	<!-- script
+   ================================================== -->
+	<script src="../../../js/modernizr.js"></script>
+	<script src="../../../js/pace.min.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+	<header class="short-header">
+
+		<div class="gradient-block"></div>
+
+		<div class="row header-content">
+
+		<?php
+    // Include the menu
+    include '../../../menu.php';
+
+    // Get the current URL of the executing script
+    $currentUrl = $_SERVER['PHP_SELF'];
+
+    // Extract the directory path from the URL
+    $menuDirectory = rtrim(dirname($currentUrl), '/'); // Remove trailing slashes
+
+    // Function to convert relative URLs to absolute URLs based on the menu directory
+    function makeAbsoluteUrl($url, $menuDir) {
+        if (strpos($url, '/') === 0) {
+            return $url; // URL is already absolute
+        } else {
+            return $menuDir . '/' . $url;
+        }
+    }
+    ?>
+
+    <!-- Modify the links in the menu using the $menuDirectory variable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+            const menuDirectory = '<?php echo $menuDirectory; ?>';
+
+            for (const link of menuLinks) {
+                link.href = makeAbsoluteUrl(link.href, menuDirectory);
+            }
+        });
+    </script>
+
+			
+
+		</div>
+
+	</header> <!-- end header -->
+
+
+	<!-- content
+   ================================================== -->
+	<section id="content-wrap" class="blog-single">
+		<div class="row">
+			<div class="col-twelve">
+
+				<article class="format-standard">
+
+					<div class="content-media">
+						<div class="post-thumb">
+							<img style="height:680px; float:right; margin-left: 25px; margin-bottom: 50px;"src="../../../images/articles/fev-mars2023/tetiana-bykovets-TzN2odwnesg-unsplash.jpg">
+						</div>
+					</div>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">Le Chocolat</h1>
+
+						<ul class="entry-meta">
+							<li class="date">Février-Mars 2023</li>
+							<li class="cat"><a href="">Nourriture</a>
+						</ul>
+
+						<p class="lead">À la Saint-Valentin, on offre des chocolats à l'élu(e) de son cœur dans de nombreux pays, mais est-ce un cadeau empoisonné ? </p>
+
+						<p class="drop-cap">Pour commencer, la poudre de cacao contenue dans le chocolat a de nombreux bienfaits pour la santé. Elle est riche en flavonoïdes, plus particulièrement les flavonols, qui sont des pigments végétaux antioxydants. Ces molécules ont un effet positif sur le système cardio-vasculaire, elles diminuent la formation du mauvais cholestérol, évitent les caillots qui bouchent les artères et l’augmentation de la pression artérielle. De plus, le cacao contient du magnésium aidant à la formation de sérotonine, hormone du bien-être, et de théobromine, régulant l’humeur.
+						</p>
+
+						<p class="drop-cap">Le chocolat est fait à base de poudre de cacao, de beurre de cacao et de beaucoup de sucre. Plus le chocolat est concentré en cacao, et meilleur il est pour la santé. Il y a 40 à 99% de cacao dans le chocolat noir, 25% minimum dans le chocolat au lait, et 20% dans le blanc. Le chocolat noir est donc la meilleure alternative, par ailleurs il a une plus faible quantité de sucre, de lait et de beurre.</p>
+
+						<p class="lead">Plus de raison de se priver de manger du chocolat ! La poudre de cacao a de nombreux bienfaits sur la santé, mais le chocolat reste à consommer avec modération, car riche en calories. On conseille 1 à 2 carreaux de chocolat par jour maximum, couplés à une alimentation saine et une activité sportive.</p>
+
+						<ul>Sources :
+							<li style="list-style:none;"><a href="https://www.futura-sciences.com/planete/dossiers/botanique-cacao-chocolat-epopee-gourmandise-1516/page/9/
+								" style="color:inherit;"><i> https://www.futura-sciences.com/planete/dossiers/botanique-cacao-chocolat-epopee-gourmandise-1516/page/9/
+								</i></a></li>
+								<li style="list-style:none;"><a href="https://www.futura-sciences.com/sante/questions-reponses/nutrition-difference-cacao-chocolat-noir-lait-blanc-6955/
+									" style="color:inherit;"><i> https://www.futura-sciences.com/sante/questions-reponses/nutrition-difference-cacao-chocolat-noir-lait-blanc-6955/
+									</i></a></li>
+						</ul>
+						
+						<p class="tags">
+							<span>Tags in :</span>
+							<a href="#">nourriture</a>
+						</p>
+
+						<?php include '../../../avatars/elisa.php'; ?>
+
+					</div> <!-- end entry-primary -->
+
+				</article>
+
+			</div> <!-- end col-twelve -->
+		</div> <!-- end row -->
+
+
+		<?php include '../../../footer.php'; ?>
+
+		<div id="preloader">
+			<div id="loader"></div>
+		</div>
+
+		<!-- Java Script
+   ================================================== -->
+		<script src="../../../js/jquery-2.1.3.min.js"></script>
+		<script src="../../../js/plugins.js"></script>
+		<script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

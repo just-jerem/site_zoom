@@ -130,7 +130,7 @@
           "@supports (" + a + ") { #modernizr { position: absolute; } }",
           function (e) {
             return "absolute" == getComputedStyle(e, null).position;
-          }
+          },
         )
       );
     }
@@ -205,7 +205,7 @@
     Modernizr.addTest(
       "svg",
       !!n.createElementNS &&
-        !!n.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect
+        !!n.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect,
     );
   var w = n.documentElement,
     b = "svg" === w.nodeName.toLowerCase();
