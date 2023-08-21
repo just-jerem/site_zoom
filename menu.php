@@ -119,7 +119,7 @@
 
 <div class="search-wrap">
 
-				<form role="search" method="get" class="search-form" action="/category.html">
+				<form role="search" method="get" class="search-form" action="/search.html">
 					<label>
 						<span class="hide-content">Search for:</span>
 						<input type="search" class="search-field" id="search-input" placeholder="Entrez vos mots clés" value="" name="s"
