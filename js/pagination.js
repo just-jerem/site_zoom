@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const articlesPerPage = 6; // Maximum number of articles per page
+  const articlesPerPage = 7; // Maximum number of articles per page
   const masonryContainer = document.querySelector(".bricks-wrapper");
   const articles = [...document.querySelectorAll(".brick")]; // Array of <article> elements
 

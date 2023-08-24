@@ -11,6 +11,16 @@
 		<li class="has-children">
 			<a title="">2022-2023</a>
 			<ul class="sub-menu">
+			<li><a href="#">Septembre</a>
+					<ul class="sub-menu">
+						<li><a href="/articles/2022-2023/septembre/Carte_Didentite_du_Mois.html">Carte
+								d'identité</a></li>
+						<li><a href="/articles/2022-2023/septembre/Chiffre_du_Mois.html">Le Chiffre</a></li>
+						<li><a href="/articles/2022-2023/septembre/Actu_Insolite.html">Actu insolite</a></li>
+						<li><a href="/articles/2022-2023/septembre/Dessins_Naturalistes.html">Dessins
+								naturalistes</a></li>
+					</ul>
+				</li>
 				<li><a href="#">Octobre-Novembre</a>
 					<ul class="sub-menu">
 						<li><a href="/articles/2022-2023/octobre-novembre/Carte_Didentite_du_Mois.html">Carte
@@ -48,6 +58,10 @@
 						<li><a href="/articles/2022-2023/fevrier-mars/Actu_Insolite.html">Actu insolite</a></li>
 						<li><a href="/articles/2022-2023/fevrier-mars/Dessins_Naturalistes.html">Dessins
 								naturalistes</a></li>
+						<li><a href="/articles/2022-2023/fevrier-mars/Oiseau_Lyre.html">L'Oiseau Lyre et la Séduction</a></li>
+						<li><a href="/articles/2022-2023/fevrier-mars/Le_Poisson_Globe.html">Le Poisson Globe et la Séduction</a></li>
+						<li><a href="/articles/2022-2023/fevrier-mars/Perturbateurs_Endocriniens.html">Les Perturbateurs Endocriniens</a></li>
+
 					</ul>
 				</li>
 

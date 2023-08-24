@@ -1,5 +1,5 @@
 <div class="author-profile">
-                            <img src="../../../images/avatars/Elisa.png" alt="">
+                            <img src="../../../images/avatars/elisa.png" alt="">
 
                             <div class="about">
                                 <h4><a href="#">Elisa</a></h4>
