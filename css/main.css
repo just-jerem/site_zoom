@@ -903,6 +903,36 @@ input::-moz-focus-inner {
 
 /* images à créditer
   * ------------------------------------------------------------------- */
+@media (min-width: 950px) {
+  .image-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .image-wrapper{
+    text-align:center;
+    margin-right: 20px;
+  }
+  
+}
+
+.image-caption {
+  margin-top:-1.5em;
+  font-style:italic;
+  text-align:center
+}
+
+@media (max-width: 950px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    margin-right: 0; 
+    margin-bottom: 20px;
+  }
+}
 
 .corb {
   display: inline;
@@ -928,6 +958,21 @@ input::-moz-focus-inner {
   .vers {
     margin-left: 100px;
   }
+}
+
+@media only screen and (min-width: 800px) {
+  .figure {
+    float: left;
+    width: 50%;
+    margin-right: 2em;
+    margin-bottom:-20px;
+  }
+}
+
+.image-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 
 

@@ -3,8 +3,10 @@
 
                             <div class="about">
                                 <h4><a href="#">Kenzo</a></h4>
+                                <p style="margin-top:-1em;">Ancien Membre / Photographe</p>
+                            </div>
 
-                                <p>A reseigner.</p>
+                                <!--<p>A reseigner.</p>
                                 <ul class="author-social">
                                     <li><a href="#">Facebook</a></li>
                                     <li><a href="#">Twitter</a></li>
@@ -12,4 +14,4 @@
                                     <li><a href="#">Instagram</i></a></li>
                                 </ul>
                             </div>
-                        </div> <!-- end author-profile -->
+                        </div> --> <!-- end author-profile -->>

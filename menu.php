@@ -30,6 +30,8 @@
 						<li><a href="/articles/2022-2023/octobre-novembre/Actu_Insolite.html">Actu insolite</a></li>
 						<li><a href="/articles/2022-2023/octobre-novembre/Dessins_Naturalistes.html">Dessins
 								naturalistes</a></li>
+						<li><a href="/articles/2022-2023/octobre-novembre/JWST_Un_Oeil_dans_lEspace.html">JWST un Oeil dans L'Espace</a></li>
+						<li><a href="/articles/2022-2023/octobre-novembre/LEspace_dans_nos_Maisons.html">L'Espace dans nos Maisons</a></li>
 					</ul>
 				</li>
 				<li><a title="">Décembre-Janvier</a>

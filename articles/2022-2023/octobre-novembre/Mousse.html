@@ -10,8 +10,8 @@
    ================================================== -->
 	<meta charset="utf-8">
 	<title>Zoom sur les Sciences</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content>
+	<meta name="author" content>
 
 	<!-- mobile specific metas
    ================================================== -->
@@ -22,7 +22,6 @@
 	<link rel="stylesheet" href="../../../css/base.css">
 	<link rel="stylesheet" href="../../../css/vendor.css">
 	<link rel="stylesheet" href="../../../css/main.css">
-
 
 	<!-- script
    ================================================== -->
@@ -46,7 +45,7 @@
 
 		<div class="row header-content">
 
-		<?php
+			<?php
     // Include the menu
     include '../../../menu.php';
 
@@ -66,24 +65,21 @@
     }
     ?>
 
-    <!-- Modify the links in the menu using the $menuDirectory variable -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
-            const menuDirectory = '<?php echo $menuDirectory; ?>';
+			<!-- Modify the links in the menu using the $menuDirectory variable -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+					const menuDirectory = '<?php echo $menuDirectory; ?>';
 
-            for (const link of menuLinks) {
-                link.href = makeAbsoluteUrl(link.href, menuDirectory);
-            }
-        });
-    </script>
-
-			
+					for (const link of menuLinks) {
+						link.href = makeAbsoluteUrl(link.href, menuDirectory);
+					}
+				});
+			</script>
 
 		</div>
 
 	</header> <!-- end header -->
-
 
 	<!-- content
    ================================================== -->
@@ -93,53 +89,54 @@
 
 				<article class="format-standard">
 
-					<div class="content-media">
-						<div class="post-thumb">
-							<img src="../../../images/articles/jan-dec2023/engin-akyurt-3ORoQEJY9LA-unsplash.jpg">
-						</div>
-					</div>
+					<figure>
+						<img style="width: 100%;"
+							src="../../../images/articles/oct-nov2023/lg-b-31.jpg">
+						<figcaption>
+							<div class="logocam">
+								<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+										src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i
+										style="position:absolute; margin-left:2px; padding-top:6.5px;"><a
+											href="https://www.lamaisondeloreiller.com/blogs/31_l-oreiller-en-mousse-a-memoire-de-forme-expli"
+											style="color:inherit">L'invention de la Mousse à Mémoire de Forme</a></i></p>
+							</div>
+						</figcaption>
+					</figure>
 
 					<div class="primary-content">
 
-						<h1 class="page-title">Une Mousse anti-secousses</h1>
+						<h1 class="page-title">La mousse à mémoire de forme, le confort de l’espace</h1>
 
 						<ul class="entry-meta">
-							<li class="date">Décembre-Janvier 2022-2023</li>
-							<li class="cat"><a href="">noël</a><a href="">nourriture</a></li>
+							<li class="date">Octobre-Novembre 2022</li>
+							<li class="cat"><a href>Sciences</a></li>
 						</ul>
 
-						<p class="lead">Vous êtes vous demandé pourquoi la bière (qu'elle soit de Noël ou non) ne
-							déborde pas du verre ?</p>
+						<p class="lead">La mousse à mémoire de forme est utilisée dans nos lits, nos matelas et nos oreillers.</p>
 
-						<p class="drop-cap">Même transportée au milieu d'une foule, la bière ne débordera pas,
-							contrairement au café. Cela s'explique par la dissipation visqueuse 1 : les bulles de mousse
-							deviennent collantes lorsqu’elles sont au contact d’un liquide qu’elles surplombent. Elles
-							se fixent au rebord du verre et elles vont ainsi limiter les mouvements du liquide.
-							Seulement 5 couches de bulles suffisent à amortir les oscillations.
-						</p>
+						<p class="drop-cap">Développée en 1966 par la Nasa, elle est utilisée pour le confort des véhicules aériens et pour réduire la pression subie par les astronautes lors du décollage.</p>
 
-						<p>Les scientifiques ayant étudié ce phénomène, se demandent si cela ne pourrait pas faciliter
-							le transport des liquides comme le carburant, un gaz liquéfié ou d’autres produits dangereux
-							car en créant de la mousse à la surface de ces substances, les mouvements causés par le
-							transport ou les arrêts brutaux pourraient être amortis.</p>
+						<p class="lead">Grâce à cette invention, on peut dormir en toute tranquillité et sans avoir mal au dos.</p>
+						
+						<ul style="list-style:none; font-size:small; padding-top:7%;">Sources :
+							<li><a href="https://fr.wikipedia.org/wiki/Mousse_%C3%A0_m%C3%A9moire_de_forme" style="color:inherit;"><i
+										style="font-size:small;">Wikipédia</i></a></li>
+							<li><a href="https://homeandcity.nasa.gov/" style="color:inherit;"><i
+										style="font-size:small;">Home and City NASA</i></a></li>
+						</ul>
 
 						<p class="tags">
-							<span>Tagué dans :</span>
-							<a href="#">noël</a><a href="#">nourriture</a>
+							<span>Tags :</span>
+							<a href="#">Sciences</a>
 						</p>
 
-						<?php include '../../../avatar/julianne.php'; ?>
+                        <?php include '../../../avatars/simon.php'; ?>
 
 					</div> <!-- end entry-primary -->
 
 				</article>
-
-
-			</div> <!-- end col-twelve -->
-		</div> <!-- end row -->
-
-
-		<?php include '../../../footer.php'; ?>
+                
+                <?php include '../../../footer.php'; ?>
 
 		<div id="preloader">
 			<div id="loader"></div>
