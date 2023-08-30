@@ -4,11 +4,108 @@ document.addEventListener("DOMContentLoaded", function () {
   const articles = [...document.querySelectorAll(".brick")];
   const searchInput = document.querySelector(".search-field");
   const searchError = document.querySelector(".search-error");
-  const articlesContainer = document.querySelector(".articles-container"); // Container for articles
+  const articlesContainer = document.querySelector(".articles-container");
 
   let filteredArticles = articles.slice();
   let currentPage = 1;
   let masonry;
+  let selectedCategories = [];
+
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const categoryParam = urlSearchParams.get("cat");
+
+  if (categoryParam) {
+    const categoriesToFilter = categoryParam.split(",");
+    selectedCategories = categoriesToFilter;
+    filterByCategories(selectedCategories);
+    updateCategoryButtons(); // Update the active state of category buttons
+  }
+
+  const categoryButtons = document.querySelectorAll(".category-button");
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category");
+      toggleCategory(category);
+    });
+  });
+
+  function toggleCategory(category) {
+    const categoryIndex = selectedCategories.indexOf(category);
+    if (categoryIndex === -1) {
+      selectedCategories.push(category);
+    } else {
+      selectedCategories.splice(categoryIndex, 1);
+    }
+    filterByCategories(selectedCategories);
+    updateURL(selectedCategories);
+  }
+
+  function filterByCategories(selectedCategories) {
+    filteredArticles = articles.filter((article) =>
+      selectedCategories.every((category) =>
+        article.querySelector(".cat-links").textContent.includes(category)
+      )
+    );
+
+    currentPage = 1;
+    updatePagination();
+
+    if (filteredArticles.length === 0) {
+      showNoResultsMessage();
+    } else {
+      hideNoResultsMessage();
+    }
+  }
+
+  function showNoResultsMessage() {
+    const noResultsMessage = document.getElementById("no-results-message");
+    noResultsMessage.style.display = "block";
+  }
+
+  function hideNoResultsMessage() {
+    const noResultsMessage = document.getElementById("no-results-message");
+    noResultsMessage.style.display = "none";
+  }
+
+  function updateURL(categories) {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (categories.length > 0) {
+      searchParams.set("cat", categories.join(","));
+    } else {
+      searchParams.delete("cat");
+    }
+
+    const newURL = new URL(window.location.href);
+    newURL.search = searchParams.toString();
+    history.replaceState(null, "", newURL);
+  }
+
+  function updateCategoryButtons() {
+    // Update the active state of category buttons based on selectedCategories
+    categoryButtons.forEach((button) => {
+      const selectedCategory = button.getAttribute("data-category");
+      if (selectedCategories.includes(selectedCategory)) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    });
+  }
+
+  // Select the reset button element
+  const resetCategoriesButton = document.getElementById("reset-categories-button");
+
+  // Add a click event listener to the reset button
+  resetCategoriesButton.addEventListener("click", () => {
+    resetCategories(); // Call the resetCategories function
+  });
+
+  function resetCategories() {
+    selectedCategories = []; // Reset the selected categories array
+    filterByCategories(selectedCategories); // Update the UI
+    updateCategoryButtons(); // Update the active state of category buttons
+    updateURL(selectedCategories); // Update the URL
+  }
 
   function updatePagination() {
     const totalPages = getTotalPages(filteredArticles);
@@ -65,6 +162,22 @@ document.addEventListener("DOMContentLoaded", function () {
         transitionDuration: 0,
       });
     }
+
+      // Display selected categories as active
+  categoryButtons.forEach((button) => {
+    const selectedCategory = button.getAttribute("data-category");
+    if (selectedCategories.includes(selectedCategory)) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+
+  if (filteredArticles.length === 0) {
+    showNoResultsMessage();
+  } else {
+    hideNoResultsMessage();
+  }
   }
 
   function goToPage(page) {

@@ -92,12 +92,59 @@
 		<div class="row masonry">
 			<div class="container">
 
+				<div class="category-buttons">
+					<button id="reset-categories-button">Tout Déselectionner</button>
+					<button class="category-button" data-category="Dossier">
+					  Dossier
+					</button>            
+					<button class="category-button" data-category="Animaux">
+					  Animaux
+					</button>
+					<button class="category-button" data-category="Technologies">
+					  Technologies
+					</button>
+					<button class="category-button" data-category="Dessins">
+					  Dessins Naturalistes
+					</button>
+					<button class="category-button" data-category="Actu">
+					  Actualité Insolite
+					</button>
+					<button class="category-button" data-category="Chiffre">
+					  Chiffre du Mois
+					</button>
+					<button class="category-button" data-category="Identité">
+					  carte d'Identité du Mois
+					</button>
+					<button class="category-button" data-category="Plante">
+					  Plantes
+					</button>
+					<button class="category-button" data-category="Corps">
+					  Corps Humain
+					</button>
+					<button class="category-button" data-category="Avril-Mai 2023">
+					  Avril-Mai 2023
+					</button>
+					<button class="category-button" data-category="Février-Mars 2023">
+					  Février-Mars 2023
+					</button>
+					<button class="category-button" data-category="Décembre">
+					  Décembre-Janvier 2022-2023
+					</button>
+					<button class="category-button" data-category="Octobre-Novembre 2022">
+					  Octobre-Novembre 2022
+					</button>
+					
+
+					<!-- Add more buttons as needed -->
+				  </div>
+
 				<!-- brick-wrapper -->
 				<div class="bricks-wrapper">
 
 					<div class="grid-sizer"></div>
 
 					<div class="search-error" style="display: none; text-align:center; color:grey; font-size:2rem;">Aucun résultats trouvés pour cette recherche</div>
+					<div id="no-results-message" class="no-results-message" style="display: none; text-align:center; color:grey; font-size:2rem;">Aucun résultats trouvés dans ces catégories</div>
 
 					<article class="brick entry format-standard animate-this">
 
@@ -112,9 +159,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Avril-Mai 2023</a>
-										<a href="#">Technologies</a>
-										<a href="#">Dossier</a>
+										<a href="#" class="category-link" data-category="Avril">Avril-Mai 2023</a>
+										<a href="#" class="category-link" data-category="Technologies">Technologies</a>
+										<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 									</span>
 								</div>
 
@@ -142,9 +189,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Avril-Mai 2023</a>
-										<a href="#">Technologies</a>
-										<a href="#">Dossier</a>
+										<a href="#" class="category-link" data-category="Avril">Avril-Mai 2023</a>
+										<a href="#" class="category-link" data-category="Technologies">Technologies</a>
+										<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 									</span>
 								</div>
 
@@ -172,9 +219,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Avril-Mai 2023</a>
-										<a href="#">Animaux</a>
-										<a href="#">Dessins Naturalistes</a>
+										<a href="#" class="category-link" data-category="Avril">Avril-Mai 2023</a>
+										<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+										<a href="#" class="category-link" data-category="Dessins">Dessins Naturalistes</a>
 									</span>
 								</div>
 
@@ -202,9 +249,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Avril-Mai 2023</a>
-										<a href="#">Technologies</a>
-										<a href="#">Actu Insolite</a>
+										<a href="#" class="category-link" data-category="Avril">Avril-Mai 2023</a>
+										<a href="#" class="category-link" data-category="Technologies">Technologies</a>
+										<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 									</span>
 								</div>
 
@@ -232,9 +279,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Avril-Mai 2023</a>
-										<a href="#">Animaux</a>
-										<a href="#">Actu Insolite</a>
+										<a href="#" class="category-link" data-category="Avril">Avril-Mai 2023</a>
+										<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+										<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 									</span>
 								</div>
 
@@ -262,9 +309,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Avril-Mai 2023</a>
-										<a href="#">technologies</a>
-										<a href="#">Chiffre du Mois</a>
+										<a href="#" class="category-link" data-category="Avril">Avril-Mai 2023</a>
+										<a href="#" class="category-link" data-category="Technologies">Technologies</a>
+										<a href="#" class="category-link" data-category="Chiffre">Chiffre du Mois</a>
 									</span>
 								</div>
 
@@ -282,7 +329,7 @@
 					<article class="brick entry format-standard animate-this">
 
 						<div class="entry-thumb">
-							<a href="/articles/2022-2023/avril-mai/Carte_Didentite_du_Mois.html" class="thumb-link">
+							<a href="/articles/2022-2023/avril-mai/Carte_DIdentité_du_Mois.html" class="thumb-link">
 								<img src="images/articles/avril-mai2023/HanAurochs.JPG" alt="building">
 							</a>
 						</div>
@@ -292,13 +339,13 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Avril-Mai 2023</a>
-										<a href="#">Animaux</a>
-										<a href="#">Catre d'Identité du Mois</a>
+										<a href="#" class="category-link" data-category="Avril">Avril-Mai 2023</a>
+										<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+										<a href="#" class="category-link" data-category="Identité">Carte d'Identité du Mois</a>
 									</span>
 								</div>
 
-								<h1 class="entry-title"><a href="/articles/2022-2023/avril-mai/Carte_Didentite_du_Mois.html">Le Carte d'Identité du Mois</a>
+								<h1 class="entry-title"><a href="/articles/2022-2023/avril-mai/Carte_DIdentité_du_Mois.html">Le Carte d'Identité du Mois</a>
 								</h1>
 
 							</div>
@@ -322,9 +369,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Corps Humain</a>
-										<a href="#">Dossier</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Corps">Corps Humain</a>
+										<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 									</span>
 								</div>
 
@@ -352,9 +399,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Animaux</a>
-										<a href="#">Dossier</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+										<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 									</span>
 								</div>
 
@@ -382,9 +429,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Animaux</a>
-										<a href="#">Dossier</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+										<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 									</span>
 								</div>
 
@@ -419,10 +466,10 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Animaux</a>
-										<a href="#">Plante</a>
-										<a href="#">Dessins Naturalistes</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+										<a href="#" class="category-link" data-category="Plante">Plante</a>
+										<a href="#" class="category-link" data-category="Dessins">Dessins Naturalistes</a>
 									</span>
 								</div>
 
@@ -450,9 +497,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Nourriture</a>
-										<a href="#">Actu insolite</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Nourriture">Nourriture</a>
+										<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 									</span>
 								</div>
 
@@ -480,9 +527,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Animaux</a>
-										<a href="#">Actu insolite</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+										<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 									</span>
 								</div>
 
@@ -510,9 +557,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Sciences</a>
-										<a href="#">Actu insolite</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Sciences">Sciences</a>
+										<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 									</span>
 								</div>
 
@@ -540,9 +587,9 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Socio</a>
-										<a href="#">Le Chiffre Du Mois</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a>
+										<a href="#" class="category-link" data-category="Socio">Socio</a>
+										<a href="#" class="category-link" data-category="Chiffre">Le Chiffre Du Mois</a>
 									</span>
 								</div>
 
@@ -560,7 +607,7 @@
 					<article class="brick entry format-standard animate-this">
 
 						<div class="entry-thumb">
-							<a href="/articles/2022-2023/fevrier-mars/Carte_Didentite_du_Mois.html" class="thumb-link">
+							<a href="/articles/2022-2023/fevrier-mars/Carte_DIdentité_du_Mois.html" class="thumb-link">
 								<img src="images/articles/fev-mars2023/aarn-giri-3tYZjGSBwbk-unsplash.jpg" alt="building">
 							</a>
 						</div>
@@ -570,13 +617,13 @@
 
 								<div class="entry-meta">
 									<span class="cat-links">
-										<a href="#">Février-Mars 2023</a>
-										<a href="#">Plante</a>
-										<a href="#">Carte d'identité du Mois</a>
+										<a href="#" class="category-link" data-category="Février-Mars 2023">Février-Mars 2023</a></a>
+										<a href="#" class="category-link" data-category="Plante">Plante</a>
+										<a href="#" class="category-link" data-category="Identité">Carte d'Identité du Mois</a>
 									</span>
 								</div>
 
-								<h1 class="entry-title"><a href="/articles/2022-2023/fevrier-mars/Carte_Didentite_du_Mois.html">La Carte d'Identité du Mois</a>
+								<h1 class="entry-title"><a href="/articles/2022-2023/fevrier-mars/Carte_DIdentité_du_Mois.html">La Carte d'Identité du Mois</a>
 								</h1>
 
 							</div>
@@ -592,7 +639,7 @@
 				<article class="brick entry format-standard animate-this">
 
 					<div class="entry-thumb">
-						<a href="/articles/2022-2023/decembre-janvier/Oeufs_de_glace.html" class="thumb-link">
+						<a href="/articles/2022-2023/Décembre-janvier/Oeufs_de_glace.html" class="thumb-link">
 							<img src="images/articles/jan-dec2023/Jää_on_kulmunud_pallideks_(Looduse_veidrused)._05.jpg" alt="building">
 						</a>
 					</div>
@@ -602,13 +649,13 @@
 
 							<div class="entry-meta">
 								<span class="cat-links">
-									<a href="#">Décembre-janvier 2022-2023</a>
-									<a href="#">Phénomène</a>
-									<a href="#">Dossier</a>
+									<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+									<a href="#" class="category-link" data-category="Phenomene">Phénomène</a>
+									<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 								</span>
 							</div>
 
-							<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Oeufs_de_glace.html">Les Oeufs de Glace</a>
+							<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Oeufs_de_glace.html">Les Oeufs de Glace</a>
 							</h1>
 
 						</div>
@@ -622,7 +669,7 @@
 				<article class="brick entry format-standard animate-this">
 
 					<div class="entry-thumb">
-						<a href="/articles/2022-2023/decembre-janvier/Les_rouleaux_de_neige.html" class="thumb-link">
+						<a href="/articles/2022-2023/Décembre-janvier/Les_rouleaux_de_neige.html" class="thumb-link">
 							<img src="images/articles/jan-dec2023/Rolling_snow.JPG" alt="building">
 						</a>
 					</div>
@@ -632,13 +679,13 @@
 
 							<div class="entry-meta">
 								<span class="cat-links">
-									<a href="#">Décembre-janvier 2022-2023</a>
-									<a href="#">Phénomène</a>
-									<a href="#">Dossier</a>
+									<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+									<a href="#" class="category-link" data-category="Phenomene">Phénomène</a>
+									<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 								</span>
 							</div>
 
-							<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Les_rouleaux_de_neige.html">Les Rouleaux de neige ou Snow Rollers</a>
+							<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Les_rouleaux_de_neige.html">Les Rouleaux de neige ou Snow Rollers</a>
 							</h1>
 
 						</div>
@@ -654,7 +701,7 @@
 			<article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-					<a href="/articles/2022-2023/decembre-janvier/Flocons_de_neige.html" class="thumb-link">
+					<a href="/articles/2022-2023/Décembre-janvier/Flocons_de_neige.html" class="thumb-link">
 						<img src="images/articles/jan-dec2023/dessinflocon.png" alt="building">
 					</a>
 				</div>
@@ -664,13 +711,13 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Décembre-janvier 2022-2023</a>
-								<a href="#">Phénomène</a>
-								<a href="#">Dossier</a>
+								<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+								<a href="#" class="category-link" data-category="Phenomene">Phénomène</a>
+								<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 							</span>
 						</div>
 
-						<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Flocons_de_neige.html">Les Flocons de Neige</a>
+						<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Flocons_de_neige.html">Les Flocons de Neige</a>
 						</h1>
 
 					</div>
@@ -684,7 +731,7 @@
 			<article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-					<a href="/articles/2022-2023/decembre-janvier/Dessins_Naturalistes.html" class="thumb-link">
+					<a href="/articles/2022-2023/Décembre-janvier/Dessins_Naturalistes.html" class="thumb-link">
 						<img src="images/articles/jan-dec2023/IMG_20230124_223143.jpg" alt="building">
 					</a>
 				</div>
@@ -694,13 +741,13 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Décembre-janvier 2022-2023</a>
-								<a href="#">Phénomène</a>
-								<a href="#">Dessins Naturalistes</a>
+								<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+								<a href="#" class="category-link" data-category="Phenomene">Phénomène</a>
+								<a href="#" class="category-link" data-category="Dessins">Dessins Naturalistes</a>
 							</span>
 						</div>
 
-						<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Dessins_Naturalistes.html">Le Dessin Naturaliste du Mois</a>
+						<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Dessins_Naturalistes.html">Le Dessin Naturaliste du Mois</a>
 						</h1>
 
 					</div>
@@ -714,7 +761,7 @@
 			<article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-					<a href="/articles/2022-2023/decembre-janvier/Mousse.html" class="thumb-link">
+					<a href="/articles/2022-2023/Décembre-janvier/Mousse.html" class="thumb-link">
 						<img src="images/articles/jan-dec2023/engin-akyurt-3ORoQEJY9LA-unsplash.jpg" alt="building">
 					</a>
 				</div>
@@ -724,13 +771,13 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Décembre-janvier 2022-2023</a>
-								<a href="#">Phénomène</a>
-								<a href="#">Actu Insolite</a>
+								<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+								<a href="#" class="category-link" data-category="Phenomene">Phénomène</a>
+								<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 							</span>
 						</div>
 
-						<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Mousse.html">Une Mousse Anti-Secousses</a>
+						<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Mousse.html">Une Mousse Anti-Secousses</a>
 						</h1>
 
 					</div>
@@ -744,7 +791,7 @@
 			<article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-					<a href="/articles/2022-2023/decembre-janvier/Chèvre.html" class="thumb-link">
+					<a href="/articles/2022-2023/Décembre-janvier/Chèvre.html" class="thumb-link">
 						<img src="images/articles/jan-dec2023/goatnoel.jpg" alt="building">
 					</a>
 				</div>
@@ -754,13 +801,13 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Décembre-janvier 2022-2023</a>
-								<a href="#">Animaux</a>
-								<a href="#">Actu Insolite</a>
+								<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+								<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+								<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 							</span>
 						</div>
 
-						<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Chèvre.html">Un Recyclage Animal pour un Noël plus écolo</a>
+						<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Chèvre.html">Un Recyclage Animal pour un Noël plus écolo</a>
 						</h1>
 
 					</div>
@@ -774,7 +821,7 @@
 			<article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-					<a href="/articles/2022-2023/decembre-janvier/Chiffre_du_Mois.html" class="thumb-link">
+					<a href="/articles/2022-2023/Décembre-janvier/Chiffre_du_Mois.html" class="thumb-link">
 						<img src="images/articles/jan-dec2023/roland-denes-u7b7F--0Kqs-unsplash.jpg" alt="building">
 					</a>
 				</div>
@@ -784,13 +831,13 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Décembre-janvier 2022-2023</a>
-								<a href="#">Socio</a>
-								<a href="#">Dessins Naturalistes</a>
+								<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+								<a href="#" class="category-link" data-category="Socio">Socio</a>
+								<a href="#" class="category-link" data-category="Dessins">Dessins Naturalistes</a>
 							</span>
 						</div>
 
-						<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Chiffre_du_Mois.html">Le Chiffre du Mois</a>
+						<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Chiffre_du_Mois.html">Le Chiffre du Mois</a>
 						</h1>
 
 					</div>
@@ -804,7 +851,7 @@
 			<article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-					<a href="/articles/2022-2023/decembre-janvier/Carte_Didentite_du_Mois.html" class="thumb-link">
+					<a href="/articles/2022-2023/Décembre-janvier/Carte_DIdentité_du_Mois.html" class="thumb-link">
 						<img src="images/articles/jan-dec2023/andreas-dress-Iw12lY3koDk-unsplash.jpg" alt="building">
 					</a>
 				</div>
@@ -814,13 +861,13 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Décembre-janvier 2022-2023</a>
-								<a href="#">Animaux</a>
-								<a href="#">Carte d'identité du Mois</a>
+								<a href="#" class="category-link" data-category="Décembre">Décembre-janvier 2022-2023</a>
+								<a href="#" class="category-link" data-category="Animaux">Animaux</a>
+								<a href="#" class="category-link" data-category="Identité">Carte d'Identité du Mois</a>
 							</span>
 						</div>
 
-						<h1 class="entry-title"><a href="/articles/2022-2023/decembre-janvier/Carte_Didentite_du_Mois.html">La Carte d'Identité du Mois</a>
+						<h1 class="entry-title"><a href="/articles/2022-2023/Décembre-janvier/Carte_DIdentité_du_Mois.html">La Carte d'Identité du Mois</a>
 						</h1>
 
 					</div>
@@ -844,9 +891,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Dossier</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 							</span>
 						</div>
 
@@ -874,9 +921,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Dossier</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 							</span>
 						</div>
 
@@ -904,9 +951,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Dossier</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 							</span>
 						</div>
 
@@ -934,9 +981,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Dossier</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 							</span>
 						</div>
 
@@ -964,9 +1011,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Dossier</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Dossier">Dossier</a>
 							</span>
 						</div>
 
@@ -994,9 +1041,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Dessins Naturalistes</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Dessins">Dessins Naturalistes</a>
 							</span>
 						</div>
 
@@ -1024,9 +1071,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Actu Insolite</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Actu">Actu Insolite</a>
 							</span>
 						</div>
 
@@ -1054,9 +1101,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Dessins Naturalistes</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Dessins">Dessins Naturalistes</a>
 							</span>
 						</div>
 
@@ -1084,9 +1131,9 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Le Chiffre du Mois</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="LeChiffre">Le Chiffre Du Mois</a>
 							</span>
 						</div>
 
@@ -1104,7 +1151,7 @@
 			<article class="brick entry format-standard animate-this">
 
 				<div class="entry-thumb">
-					<a href="/articles/2022-2023/octobre-novembre/Carte_Didentite_du_Mois.html" class="thumb-link">
+					<a href="/articles/2022-2023/octobre-novembre/Carte_DIdentité_du_Mois.html" class="thumb-link">
 						<img src="images/articles/oct-nov2023/Thale_cress_grown_within_transparent_gel_plates_in_weightlessness.jpg" alt="building">
 					</a>
 				</div>
@@ -1114,13 +1161,13 @@
 
 						<div class="entry-meta">
 							<span class="cat-links">
-								<a href="#">Octobre-Novembre 2022</a>
-								<a href="#">Espace</a>
-								<a href="#">Carte d'Identité du Mois</a>
+								<a href="#" class="category-link" data-category="Octobre-Novembre 2022">Octobre-Novembre 2022</a>
+								<a href="#" class="category-link" data-category="Espace">Espace</a>
+								<a href="#" class="category-link" data-category="Identité">Carte d'Identité du Mois</a>
 							</span>
 						</div>
 
-						<h1 class="entry-title"><a href="/articles/2022-2023/octobre-novembre/Carte_Didentite_du_Mois.html">La Carte d'Identité du Mois</a>
+						<h1 class="entry-title"><a href="/articles/2022-2023/octobre-novembre/Carte_DIdentité_du_Mois.html">La Carte d'Identité du Mois</a>
 						</h1>
 
 					</div>
