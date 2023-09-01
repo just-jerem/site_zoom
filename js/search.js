@@ -5,11 +5,62 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector(".search-field");
   const searchError = document.querySelector(".search-error");
   const articlesContainer = document.querySelector(".articles-container");
+  const categoryButtons = document.querySelectorAll(".category-button");
 
   let filteredArticles = articles.slice();
   let currentPage = 1;
   let masonry;
   let selectedCategories = [];
+
+  const categoryAndTagLinks = document.querySelectorAll(".cat-links a[data-category]");
+  categoryAndTagLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const category = link.getAttribute("data-category"); // Get the category or tag name
+      updateURLWithCategory(category);
+      event.preventDefault(); // Prevent the default behavior of anchor tags
+    });
+  });
+
+  // Call updateCategoryButtons after updating selectedCategories
+function toggleCategory(category) {
+  const categoryIndex = selectedCategories.indexOf(category);
+  if (categoryIndex === -1) {
+    selectedCategories.push(category);
+  } else {
+    selectedCategories.splice(categoryIndex, 1);
+  }
+  filterByCategories(selectedCategories);
+  updateURL(selectedCategories);
+
+  // Call updateCategoryButtons after updating selectedCategories
+  updateCategoryButtons();
+}
+
+
+  function updateCategoryButtons() {
+    // Update the active state of category buttons based on selectedCategories
+    categoryButtons.forEach((button) => {
+      const selectedCategory = button.getAttribute("data-category");
+      if (selectedCategories.includes(selectedCategory)) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    });
+  }
+
+  // Call updateCategoryButtons after initializing categoryButtons
+updateCategoryButtons();
+
+  function updateURLWithCategory(category) {
+    const pathToSearch = "../../search.html"; // Adjust the relative path as needed
+    const searchParams = new URLSearchParams();
+    searchParams.set("cat", category);
+  
+    const newURL = new URL(pathToSearch, window.location.origin);
+    newURL.search = searchParams.toString();
+    window.location.href = newURL.href;
+  }
 
   const urlSearchParams = new URLSearchParams(window.location.search);
   const categoryParam = urlSearchParams.get("cat");
@@ -21,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCategoryButtons(); // Update the active state of category buttons
   }
 
-  const categoryButtons = document.querySelectorAll(".category-button");
   categoryButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const category = button.getAttribute("data-category");
@@ -29,33 +79,52 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  function toggleCategory(category) {
-    const categoryIndex = selectedCategories.indexOf(category);
-    if (categoryIndex === -1) {
-      selectedCategories.push(category);
-    } else {
-      selectedCategories.splice(categoryIndex, 1);
-    }
-    filterByCategories(selectedCategories);
-    updateURL(selectedCategories);
-  }
+  
 
   function filterByCategories(selectedCategories) {
     filteredArticles = articles.filter((article) =>
       selectedCategories.every((category) =>
         article.querySelector(".cat-links").textContent.includes(category)
-      )
+      ) &&
+      article.textContent.toLowerCase().includes(searchInput.value.toLowerCase()) // Include this condition
     );
-
+  
     currentPage = 1;
     updatePagination();
-
+  
     if (filteredArticles.length === 0) {
       showNoResultsMessage();
     } else {
       hideNoResultsMessage();
     }
   }
+
+  function filterByCategoriesAndSearch(selectedCategories) {
+    filteredArticles = articles.filter((article) =>
+      selectedCategories.every((category) =>
+        article.querySelector(".cat-links").textContent.includes(category)
+      ) &&
+      article.textContent.toLowerCase().includes(searchInput.value.toLowerCase())
+    );
+  
+    currentPage = 1;
+    updatePagination();
+  
+    if (filteredArticles.length === 0) {
+      showNoResultsMessage();
+    } else {
+      hideNoResultsMessage();
+    }
+  }
+
+  function filterArticles(query) {
+    const lowerCaseQuery = query.toLowerCase();
+    searchInput.value = query; // Set the search input value
+    filterByCategoriesAndSearch(selectedCategories); // Trigger filtering by categories and search
+    searchError.style.display = filteredArticles.length > 0 ? "none" : "block";
+    updatePagination();
+  }
+  
 
   function showNoResultsMessage() {
     const noResultsMessage = document.getElementById("no-results-message");
@@ -80,16 +149,16 @@ document.addEventListener("DOMContentLoaded", function () {
     history.replaceState(null, "", newURL);
   }
 
-  function updateCategoryButtons() {
-    // Update the active state of category buttons based on selectedCategories
-    categoryButtons.forEach((button) => {
-      const selectedCategory = button.getAttribute("data-category");
-      if (selectedCategories.includes(selectedCategory)) {
-        button.classList.add("active");
-      } else {
-        button.classList.remove("active");
-      }
-    });
+
+
+  function updateURLWithCategory(category) {
+    const pathToSearch = "../../search.html"; // Adjust the relative path as needed
+    const searchParams = new URLSearchParams();
+    searchParams.set("cat", category);
+  
+    const newURL = new URL(pathToSearch, window.location.origin);
+    newURL.search = searchParams.toString();
+    window.location.href = newURL.href;
   }
 
   // Select the reset button element
@@ -196,12 +265,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function filterArticles(query) {
     const lowerCaseQuery = query.toLowerCase();
-    filteredArticles = articles.filter((article) =>
-      article.textContent.toLowerCase().includes(lowerCaseQuery),
+    searchInput.value = query; // Set the search input value
+    filterByCategories(selectedCategories); // Trigger filtering by categories
+    filteredArticles = filteredArticles.filter((article) =>
+      article.textContent.toLowerCase().includes(lowerCaseQuery)
     );
-
+  
     searchError.style.display = filteredArticles.length > 0 ? "none" : "block";
-
+  
     updatePagination();
   }
 
@@ -244,4 +315,5 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     updatePagination(); // Show initial pagination
   }
+
 });

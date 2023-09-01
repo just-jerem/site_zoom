@@ -46,7 +46,7 @@
 
 		<div class="row header-content">
 
-			<?php
+		<?php
     // Include the menu
     include '../../../menu.php';
 
@@ -66,19 +66,19 @@
     }
     ?>
 
-			<!-- Modify the links in the menu using the $menuDirectory variable -->
-			<script>
-				document.addEventListener('DOMContentLoaded', function () {
-					const menuLinks = document.querySelectorAll('#main-nav-wrap a');
-					const menuDirectory = '<?php echo $menuDirectory; ?>';
+    <!-- Modify the links in the menu using the $menuDirectory variable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+            const menuDirectory = '<?php echo $menuDirectory; ?>';
 
-					for (const link of menuLinks) {
-						link.href = makeAbsoluteUrl(link.href, menuDirectory);
-					}
-				});
-			</script>
+            for (const link of menuLinks) {
+                link.href = makeAbsoluteUrl(link.href, menuDirectory);
+            }
+        });
+    </script>
 
-
+			
 
 		</div>
 
@@ -91,60 +91,33 @@
 		<div class="row">
 			<div class="col-twelve">
 
-				<article class="format-standard">
+				<article class="format-standard" style="margin-top:2em;">
 
-					<div class="content-media" style="position:relative;">
-						<div class="post-thumb">
-							<img src="../../../images/articles/fevrier/huntsman-leaf-trap_page_2021-01-22.jpg">
-						</div>
-						<div class="logocam">
-							<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
-									src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><span
-									style="position:absolute; margin-left:2px; padding-top:6.5px;"><i>Dominique
-										Andreas Martin</i></span></p>
-						</div>
-					</div>
+                    <div class="content-media">
+                        <div class="post-thumb">
+                            <img src="../../../images/articles/fev-mars2023/inseparables.png">
+                        </div>
+                    </div>
 
-					<div class="primary-content">
+                    <div class="primary-content">
 
-						<h1 class="page-title">Des araignées cousent des feuilles pour piéger des grenouilles</h1>
+                        <h1 class="page-title">Couple d'Inséparables</h1>
 
-						<ul class="entry-meta">
-							<li class="date">Février 2022</li>
-							<li class="cat"><a href="#" class="category-link" data-category="Animaux">Animaux</a><a href="#" data-category="Février 2022">Février 2022</a>
-						</ul>
+                        <ul class="entry-meta">
+                            <li class="date">Février-Mars 2023</li>
+                            <li class="cat"><a href="#" class="category-link" data-category="Animaux">Animaux</a><a href="#" data-category="Dessins">Dessins Naturalistes</a><a href="#" data-category="Février-Mars 2023">Février-Mars 2023</a></li>
+                        </ul>
 
-						<p class="lead">Nous avons vu dans Sciences et Avenir paru en Mars 2021, que des
-							araignées appelées Damastes piègent des grenouilles au sein d'un abri constitué de deux
-							feuilles reliées par des fils de soie.</p>
+                        <p class="tags">
+                            <span>Tags :</span>
+                            <a href="#" class="category-link" data-category="Animaux">Animaux</a><a href="#" data-category="Dessins">Dessins Naturalistes</a><a href="#" data-category="Février-Mars 2023">Février-Mars 2023</a>
+                        </p>
 
-						<p>Les grenouilles s'y abritent en pensant se protéger du soleil alors que c'est un
-							piège mortel.</p>
+                        <?php include '../../../avatars/flore.php'; ?>
 
-						<p class="tags">
-							<span>Tags :</span>
-							<a href="#" class="category-link" data-category="Animaux">Animaux</a><a href="#" data-category="Février 2022">Février 2022</a>
-						</p>
-
-
-					</div> <!-- end entry-primary -->
-
-					<div class="pagenav group">
-						<div class="prev-nav">
-							<a href="Chiffre_du_Mois.html" rel="prev">
-								<span>Précédent</span>
-								Le Chiffre du Mois
-							</a>
-						</div>
-						<div class="next-nav">
-							<a href="Dessins_Naturalistes.html" rel="next">
-								<span>Suivant</span>
-								Dessins Naturalistes
-							</a>
-						</div>
-					</div>
-
-				</article>
+                        </div>
+                    
+                    </article>
 
 
 			</div> <!-- end col-twelve -->
@@ -162,7 +135,7 @@
 		<script src="../../../js/jquery-2.1.3.min.js"></script>
 		<script src="../../../js/plugins.js"></script>
 		<script src="../../../js/main.js"></script>
-		<script src="../../../js/categoryClick.js"></script>
+        <script src="../../../js/categoryClick.js"></script>
 
 </body>
 
