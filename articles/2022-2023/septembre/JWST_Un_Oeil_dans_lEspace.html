@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Zoom sur les Sciences</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/vendor.css">
+	<link rel="stylesheet" href="../../../css/main.css">
+
+
+	<!-- script
+   ================================================== -->
+	<script src="../../../js/modernizr.js"></script>
+	<script src="../../../js/pace.min.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+	<header class="short-header">
+
+		<div class="gradient-block"></div>
+
+		<div class="row header-content">
+
+		<?php
+    // Include the menu
+    include '../../../menu.php';
+
+    // Get the current URL of the executing script
+    $currentUrl = $_SERVER['PHP_SELF'];
+
+    // Extract the directory path from the URL
+    $menuDirectory = rtrim(dirname($currentUrl), '/'); // Remove trailing slashes
+
+    // Function to convert relative URLs to absolute URLs based on the menu directory
+    function makeAbsoluteUrl($url, $menuDir) {
+        if (strpos($url, '/') === 0) {
+            return $url; // URL is already absolute
+        } else {
+            return $menuDir . '/' . $url;
+        }
+    }
+    ?>
+
+    <!-- Modify the links in the menu using the $menuDirectory variable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+            const menuDirectory = '<?php echo $menuDirectory; ?>';
+
+            for (const link of menuLinks) {
+                link.href = makeAbsoluteUrl(link.href, menuDirectory);
+            }
+        });
+    </script>
+
+			
+
+		</div>
+
+	</header> <!-- end header -->
+
+
+	<!-- content
+   ================================================== -->
+	<section id="content-wrap" class="blog-single">
+		<div class="row">
+			<div class="col-twelve">
+
+				<article class="format-standard">
+
+					<figure>
+						<img style="width: 100%;" src="../../../images/articles/oct-nov2023/stsci-01ga76rm0c11w977jrhgj5j26x.png">
+						<figcaption>
+							<div class="logocam">
+								<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+									src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i style="position:absolute; margin-left:2px; padding-top:6.5px;"><a href="https://esawebb.org/images/weic2212a/zoomable/" style="color:inherit">NASA, ESA, CSA, & STScI</a></i></p>
+							</div>
+						</figcaption>
+					  </figure>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">JWST, un Oeil dans L'Espace</h1>
+
+						<ul class="entry-meta">
+							<li class="date">Octobre-Novmebre 2022</li>
+							<li class="cat"><a href="#" class="category-link" data-category="Espace">Espace</a>
+						</ul>
+
+						<p class="lead">Le JWST (James Webb Space Telescope) est actif depuis déjà plusieurs mois et il ne finit pas de nous surprendre.</p>
+
+						<p class="drop-cap">En effet, ce bijou de technologie,  conçu à la base pour répondre à deux questions importantes: "d’où venons-nous ?" et "sommes-nous seuls dans l’univers ?", a pu observer récemment une "Tarentule de l'espace",  nouvelle nébuleuse magnifique et très lointaine  puisqu'elle se trouve à quelques 170 000 années lumières de la Terre. Le télescope James Webb a pu prendre un cliché infrarouge unique au monde. Grâce à ses nouveaux systèmes,  nous pouvons observer des nuances de couleurs et des reflets que même Hubble n'aurait pas réussi à capter.</p>
+
+						<h2>Voici un petit comparatif entre Hubble et JWST d'une photo des <u><a href="#pillars" class="lienimg smoothscroll">"Pilliers de la Création"</a></u> localisé à 7 000 années-lumière de la Terre dans la nébuleuse de l'aigle:</h2>
+
+						<div class="image-container" id="pillars">
+							<div class="image-wrapper" style="text-align:center;">
+							  <img src="../../../images/articles/oct-nov2023/pillars_of_creation.jpg" style="height:500px; margin-left: 0.5em;">
+							  <p class="image-caption logocam"><a href="https://www.nasa.gov/image-feature/the-pillars-of-creation" style="color:inherit;">Hubble</a></p>
+							</div>
+							<div class="image-wrapper">
+							  <img src="../../../images/articles/oct-nov2023/STScI-01GFNN3PWJMY4RQXKZ585BC4QH.png" style="height:500px; margin-left: 0.5em;">
+							  <p class="image-caption logocam"><a href="https://webbtelescope.org/contents/media/images/2022/052/01GF423GBQSK6ANC89NTFJW8VM" style="color:inherit;">JWST</a></p>
+							</div>
+						  </div>
+						  
+						  <p class="drop-cap" style="position:relative;">Comme dit précédemment, James Webb comporte un système assez avancé en terme de technologies comme on peut le voir dans le schéma ci-dessous</p>
+
+						  <figure>
+							<center><img style="width: 100%;  text-align:center; margin-left: 0.5em;" src="../../../images/articles/oct-nov2023/Télescope-James-Webb---les-différents-composants-de-la-charge-utile-ote1-fr.png"></center>
+							<figcaption>
+								<div class="logocam">
+									<p  style="text-align:center; margin-top:-1em;"><i><a href="https://webbtelescope.org/home" style="color:inherit">Schéma Éclaté du James Webb Space Telescope</a></i></p>
+								</div>
+							</figcaption>
+						  </figure>
+
+						<p class="drop-cap"> Je ne vais pas entrer dans les détails mais il utilise uniquement l'infrarouge avec le même principe que les éclipses solaires, réduire la luminosité qu'il reçoit afin de se focaliser sur un point précis et capter grâce à son système MIRI le faible rayonnement émis par les étoiles et planètes lointaines qu'il vise. Il va ensuite retranscrire ce qu'il reçoit avec ses capteurs en image numérique qui seront transmises à la NASA et autres agences spatiales.</p>
+						
+						<h2>Voici une petite vidéo qui explique en détails son fonctionnement :</h2>
+
+						<div class="fluid-video-wrapper">
+                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/_vnVsqwoUxA" title="Télescope James-Webb : le télescope le plus perfectionné jamais construit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>						
+
+						<p class="lead">Nous avons pu voir que le JWST possède une technologie unique au monde qui pourrait s'avérer très utile dans le futur, surtout pour des recherches scientifiques d'envergure.</p>
+
+						<p class="drop-cap">Ce qu'il a observé, comme par exemple la nébuleuse de la Tarentule, est majoritairement constituée d'hydrogène, l'élément le plus présent dans l'univers.  C'est grâce aux propriétés de cet élément   qu' il a pu capter des clichés si pleins de couleurs, en particulier des rouges. Les nébuleuses sont constituées d'hydrogène alpha, un type d'hydrogène bien particulier puisqu'il s'agit d'un atome ayant des électrons passant d'un niveau à un autre. Lors de ce passage, un pic rouge est émis, c'est ce que nous voyons et qui explique ces couleurs. On peut observer ce pic sur la <u><a href="#balmer" class="lienimg smoothscroll">série de Balmer</a></u></p>
+
+						<figure id="balmer">
+							<center><img style="width: 100%;  text-align:center; margin-left: 0.5em;" src="../../../images/articles/oct-nov2023/hydrog8.gif"></center>
+							<figcaption>
+								<div class="logocam">
+									<p  style="text-align:center; margin-top:-1em;"><i><a href="https://fr.wikipedia.org/wiki/S%C3%A9rie_de_Balmer" style="color:inherit">Raies d'émission de l'Hydrogène à différentes longueurs d'onde : série de Balmer</a></i></p>
+								</div>
+							</figcaption>
+						  </figure>
+
+						<p class="lead">On ne peut évidemment pas parler de nébuleuses sans parler de leur formation.</p>
+
+						<p class="drop-cap">Il faut savoir que les nébuleuses sont à l'origine de tout, des plus imposants aux plus petits astres. Elles ont permis à la vie d'exister. Il faut également savoir que jusqu'au début du 20ème siècle, le terme de nébuleuse désignait tout objet céleste d'aspect diffus, ce qui en faisait un terme un peu fourre-tout, mais depuis les années 20, ce terme désigne un "milieu interstellaire particulièrement riche soit en gaz soit en poussière interstellaire (terme désignant des micro résidus) et ce grâce à une personne qui donna son nom à un des plus grands télescopes ayant jamais existé,  Edwin Hubble.</p>
+
+						<p>Ces nuages de gaz sont dispersés un peu partout dans l'univers et sont la conséquence de la mort d'une étoile supermassive qui s'est effondrée sur elle-même à cause de la gravité.  Ceci provoque une <a href="#supernova" class="lienimg smoothscroll">supernova</a>, implosion de cette étoile morte.</p>
+
+						<div id="supernova">
+							<p>
+								<center><img style="width: 600px;"
+									src="../../../images/articles/oct-nov2023/super.png"></center>
+							<div class="logocam">
+								<p style="position:relative; left:-20px; top:-55px; text-align:center; margin-bottom:-50px;"><img
+										src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><span
+										class="lead" style="position:relative; left: 2%; top:2.5px;"><a href="https://www.nasa.gov/feature/goddard/2023/nasa-s-webb-telescope-captures-rarely-seen-prelude-to-supernova" style="color:inherit;"><i>NASA, ESA, CSA, STScI, Webb ERO Production Team</i></a></span></p>
+							</div>
+							</p>
+						</div>
+
+						<p class="lead">Une supernova émet alors de la lumière donc de l'énergie, pendant un bref instant, mais en  quantité immense. Pour donner un ordre d'idée,  une supernova peut briller plus que toute une galaxie (10<sup>11</sup> étoiles). Elle expulse aussi de la matière qui sera à l'origine de la nébuleuse.</p>
+
+						<p class="tags">
+							<span>Tags :</span>
+							<a href="#">temperature</a><a href="#" class="category-link" data-category="Phénomène">Phénomène</a>
+						</p>
+
+						<?php include '../../../avatars/jeremie.php'; ?>
+
+					</div> <!-- end entry-primary -->
+
+					<div class="pagenav group">
+						<div class="prev-nav">
+							<a href="Dessins_Naturalistes.html" rel="prev">
+								<span>Précédent</span>
+								Dessins Naturalistes
+							</a>
+						</div>
+						<div class="next-nav">
+							<a href="LEspace_dans_nos_Maisons.html" rel="next">
+								<span>Suivant</span>
+								L'Espace dans nos Maisons
+							</a>
+						</div>	
+					</div>
+
+				</article>
+
+
+			</div> <!-- end col-twelve -->
+		</div> <!-- end row -->
+
+
+		<?php include '../../../footer.php'; ?>
+
+		<div id="preloader">
+			<div id="loader"></div>
+		</div>
+
+		<!-- Java Script
+   ================================================== -->
+		<script src="../../../js/jquery-2.1.3.min.js"></script>
+		<script src="../../../js/plugins.js"></script>
+		<script src="../../../js/main.js"></script>
+		<script src="../../../js/categoryClick.js"></script>
+
+</body>
+
+</html>

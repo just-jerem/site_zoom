@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Zoom sur les Sciences</title>
+	<meta name="description" content>
+	<meta name="author" content>
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/vendor.css">
+	<link rel="stylesheet" href="../../../css/main.css">
+
+	<!-- script
+   ================================================== -->
+	<script src="../../../js/modernizr.js"></script>
+	<script src="../../../js/pace.min.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+	<header class="short-header">
+
+		<div class="gradient-block"></div>
+
+		<div class="row header-content">
+
+			<?php
+    // Include the menu
+    include '../../../menu.php';
+
+    // Get the current URL of the executing script
+    $currentUrl = $_SERVER['PHP_SELF'];
+
+    // Extract the directory path from the URL
+    $menuDirectory = rtrim(dirname($currentUrl), '/'); // Remove trailing slashes
+
+    // Function to convert relative URLs to absolute URLs based on the menu directory
+    function makeAbsoluteUrl($url, $menuDir) {
+        if (strpos($url, '/') === 0) {
+            return $url; // URL is already absolute
+        } else {
+            return $menuDir . '/' . $url;
+        }
+    }
+    ?>
+
+			<!-- Modify the links in the menu using the $menuDirectory variable -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+					const menuDirectory = '<?php echo $menuDirectory; ?>';
+
+					for (const link of menuLinks) {
+						link.href = makeAbsoluteUrl(link.href, menuDirectory);
+					}
+				});
+			</script>
+
+		</div>
+
+	</header> <!-- end header -->
+
+	<!-- content
+   ================================================== -->
+	<section id="content-wrap" class="blog-single">
+		<div class="row">
+			<div class="col-twelve">
+
+				<article class="format-standard">
+
+					<figure class="figure">
+						<img style="width: 100%;"
+							src="../../../images/articles/oct-nov2023/842px-Aerogelflower_filtered.jpg">
+						<figcaption>
+							<div class="logocam">
+								<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+										src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i
+										style="position:absolute; margin-left:2px; padding-top:6.5px;"><a
+											href="https://curator.jsc.nasa.gov/stardust/aerogel.cfm"
+											style="color:inherit">NASA / Stardust</a></i></p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">L'aérogel</h1>
+
+						<ul class="entry-meta">
+							<li class="date">Octobre-Novembre 2022</li>
+							<li class="cat"><a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a></li>
+						</ul>
+
+						<p class="lead">L’aérogel est un isolant extrêmement léger et très
+							efficace</p>
+
+						<p class="drop-cap">Il est utilisé dans certaines vestes, semelles
+							intérieures de chaussures etc... Mais il est aussi utilisé pour isoler
+							les fusées et les rovers. L'aérogel a été inventé en 1931 par Steven
+							Kistler mais il était particulièrement fragile. </p>
+
+						<p>En 1991, la Nasa s'associe à une société de recherche et de
+							développement pour créer une version plus résistante, plus flexible et
+							plus durable, composée de carbone. L'aérogel est composé à 90% d'air. Sa
+							masse volumique est donc de 0,16 mg/cm<sup>3</sup>.</p>
+
+						<p class="lead">Il est le 2eme matériau le plus léger du monde.</p>
+
+						<ul style="list-style:none; font-size:small; padding-top:7%;">Sources :
+							<li><a href="https://fr.wikipedia.org/wiki/A%C3%A9rogel" style="color:inherit;"><i
+										style="font-size:small;">Wikipédia</i></a></li>
+							<li><a href="https://homeandcity.nasa.gov/" style="color:inherit;"><i
+										style="font-size:small;">Home and City NASA</i></a></li>
+						</ul>
+
+						<p class="tags">
+							<span>Tags :</span>
+							<a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a>
+						</p>
+
+					</div> <!-- end entry-primary -->
+
+				</article>
+
+				<article class="format-standard">
+
+					<figure>
+						<img style="width: 100%;"
+							src="../../../images/articles/oct-nov2023/lg-b-31.jpg">
+						<figcaption>
+							<div class="logocam">
+								<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+										src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i
+										style="position:absolute; margin-left:2px; padding-top:6.5px;"><a
+											href="https://www.lamaisondeloreiller.com/blogs/31_l-oreiller-en-mousse-a-memoire-de-forme-expli"
+											style="color:inherit">L'invention de la Mousse à Mémoire de Forme</a></i></p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">La mousse à mémoire de forme, le confort de l’espace</h1>
+
+						<ul class="entry-meta">
+							<li class="date">Octobre-Novembre 2022</li>
+							<li class="cat"><a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a></li>
+						</ul>
+
+						<p class="lead">La mousse à mémoire de forme est utilisée dans nos lits, nos matelas et nos oreillers.</p>
+
+						<p class="drop-cap">Développée en 1966 par la Nasa, elle est utilisée pour le confort des véhicules aériens et pour réduire la pression subie par les astronautes lors du décollage.</p>
+
+						<p class="lead">Grâce à cette invention, on peut dormir en toute tranquillité et sans avoir mal au dos.</p>
+						
+						<ul style="list-style:none; font-size:small; padding-top:7%;">Sources :
+							<li><a href="https://fr.wikipedia.org/wiki/Mousse_%C3%A0_m%C3%A9moire_de_forme" style="color:inherit;"><i
+										style="font-size:small;">Wikipédia</i></a></li>
+							<li><a href="https://homeandcity.nasa.gov/" style="color:inherit;"><i
+										style="font-size:small;">Home and City NASA</i></a></li>
+						</ul>
+
+						<p class="tags">
+							<span>Tags :</span>
+							<a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a>
+						</p>
+
+					</div> <!-- end entry-primary -->
+
+				</article>
+
+				<article class="format-standard">
+
+					<figure class="figure">
+						<img style="width: 100%;"
+							src="../../../images/articles/oct-nov2023/maxresdefault.jpg">
+						<figcaption>
+							<div class="logocam">
+								<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+										src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i
+										style="position:absolute; margin-left:2px; padding-top:6.5px;"><a
+											href="https://okoeurope.com/"
+											style="color:inherit">Öko <sup>©</sup></a></i></p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">Des bouteilles d’eau capableS de filtrer De l’eau en toute situation</h1>
+
+						<ul class="entry-meta">
+							<li class="date">Octobre-Novembre 2022</li>
+							<li class="cat"><a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a></li>
+						</ul>
+
+						<p class="lead">Chez vous, vous avez peut-être des bouteilles d’eau possédant un filtre. Mais saviez-vous que la création de cette technologie n’a été possible que grâce à l’aide de la NASA?</p>
+
+						<p class="drop-cap">En effet, Mohssen Ghiassi, un entrepreneur spécialisé dans le développement de produits destinés à l'industrie du voyage, était à la recherche d'une technologie qui lui permettrait de créer une bouteille d'eau dotée d'un système de filtration avancé, pouvant être emportée partout dans le monde. Mais durant ses recherches, Ghiassi s'est heurté au problème du débit : l'eau traversait le filtre trop lentement pour permettre une purification pratique pour les consommateurs. Cependant, ses recherches l'ont conduit à une solution dérivée du travail de la NASA : la NanoCeram.</p>
+
+						<p>M. Ghiassi a donc fondé ÖKO, dont le siège est en Californie, pour commercialiser sa technologie  : la bouteille d'eau ÖKO. La filtration améliorée par la NASA de la bouteille ÖKO  élimine de nombreux polluants, notamment des microbes pathogènes. ÖKO a d'autres innovations en préparation.</p>
+
+						<p class="lead">Le matériau de filtration développé par la NASA est au cœur de tous ses produits !</p>
+
+						<ul style="list-style:none; font-size:small; padding-top:7%;">Sources :
+							<li><a href="https://okoeurope.com/" style="color:inherit;"><i
+										style="font-size:small;">Öko Europe </i></a></li>
+							<li><a href="https://www.nasa.gov/offices/oct/images/oko-water-bottle-contains-nasa-developed-filtration-media-for-water-purification" style="color:inherit;"><i
+										style="font-size:small;">NASA</i></a></li>
+						</ul>
+
+						<p class="tags">
+							<span>Tags :</span>
+							<a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a>
+						</p>
+
+					</div> <!-- end entry-primary -->
+
+				</article>
+
+				<article class="format-standard">
+
+					<figure>
+						<img style="width: 100%;"
+							src="../../../images/articles/oct-nov2023/matthew-fournier-gNws8ZmcMvM-unsplash.jpg">						
+					</figure>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">Les lunettes de ski : Une protection pour voir la vie en rose</h1>
+
+						<ul class="entry-meta">
+							<li class="date">Octobre-Novembre 2022</li>
+							<li class="cat"><a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a></li>
+						</ul>
+
+						<p class="lead">Dans le but de rendre les visières des casques des astronautes plus protectrices contre les rayons ultraviolets, les chercheurs de la NASA, en collaboration avec la société de lunettes Foster Grant, ont fait des progrès considérables.</p>
+
+						<p class="drop-cap">Ces filtres UV sont également utilisés pour les lunettes de ski, car en montagne, les rayons du soleil sont moins filtrés par l'atmosphère et la quantité d'UV augmente de 4% tous les 300 m. De plus, la neige réfléchit 85% de ces UV.</p>
+
+						<p class="lead">Les filtres à rayons ultraviolets sont aussi très utiles dans le quotidien des enfants de la lune, qui, à cause d'une maladie génétique (Xeroderma pigmentosum) sont ultra sensibles aux UV</p>
+
+						<ul style="list-style:none; font-size:small; padding-top:7%;">Sources :
+							<li><a href="https://www.gnovisjournal.org/inventions-de-la-nasa-que-nous-utilisons-tous-les-jours/#verres-resistants-aux-rayures-et-protegeant-des-uv" style="color:inherit;"><i
+										style="font-size:small;">gnovisjournal.org</i></a></li>
+							<li><a href="https://www.choisir-ses-lunettes.com/masques-et-lunettes-de-ski.html" style="color:inherit;"><i
+										style="font-size:small;">choisir-ses-lunettes.com</i></a></li>
+						</ul>
+
+						<p class="tags">
+							<span>Tags :</span>
+							<a href="#" class="category-link" data-category="Sciences">Sciences</a><a href="#" class="category-link" data-category="Dossier">Dossier</a>
+						</p>
+
+					</div> <!-- end entry-primary -->
+
+					<?php include '../../../avatars/simon.php'; ?>
+
+				</article>
+
+				<div class="pagenav group">
+					<div class="prev-nav">
+						<a href="JWST_Un_Oeil_dans_lEspace.html" rel="prev">
+							<span>Précédent</span>
+							JWST un Oeil dans L'Espace
+						</a>
+					</div>					
+				</div>
+			</div> <!-- end col-twelve -->
+		</div> <!-- end row -->
+
+		<?php include '../../../footer.php'; ?>
+
+		<div id="preloader">
+			<div id="loader"></div>
+		</div>
+
+		<!-- Java Script
+   ================================================== -->
+		<script src="../../../js/jquery-2.1.3.min.js"></script>
+		<script src="../../../js/plugins.js"></script>
+		<script src="../../../js/main.js"></script>
+		<script src="../../../js/categoryClick.js"></script>
+
+</body>
+
+</html>

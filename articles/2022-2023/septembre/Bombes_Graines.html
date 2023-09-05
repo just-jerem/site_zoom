@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!--- basic page needs
+   ================================================== -->
+	<meta charset="utf-8">
+	<title>Zoom sur les Sciences</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="../../../css/base.css">
+	<link rel="stylesheet" href="../../../css/vendor.css">
+	<link rel="stylesheet" href="../../../css/main.css">
+
+
+	<!-- script
+   ================================================== -->
+	<script src="../../../js/modernizr.js"></script>
+	<script src="../../../js/pace.min.js"></script>
+
+	<!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+	<header class="short-header">
+
+		<div class="gradient-block"></div>
+
+		<div class="row header-content">
+
+		<?php
+    // Include the menu
+    include '../../../menu.php';
+
+    // Get the current URL of the executing script
+    $currentUrl = $_SERVER['PHP_SELF'];
+
+    // Extract the directory path from the URL
+    $menuDirectory = rtrim(dirname($currentUrl), '/'); // Remove trailing slashes
+
+    // Function to convert relative URLs to absolute URLs based on the menu directory
+    function makeAbsoluteUrl($url, $menuDir) {
+        if (strpos($url, '/') === 0) {
+            return $url; // URL is already absolute
+        } else {
+            return $menuDir . '/' . $url;
+        }
+    }
+    ?>
+
+    <!-- Modify the links in the menu using the $menuDirectory variable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('#main-nav-wrap a');
+            const menuDirectory = '<?php echo $menuDirectory; ?>';
+
+            for (const link of menuLinks) {
+                link.href = makeAbsoluteUrl(link.href, menuDirectory);
+            }
+        });
+    </script>
+
+			
+
+		</div>
+
+	</header> <!-- end header -->
+
+
+	<!-- content
+   ================================================== -->
+	<section id="content-wrap" class="blog-single">
+		<div class="row">
+			<div class="col-twelve">
+
+				<article class="format-standard">
+
+					<div class="content-media" style="position:relative; margin-top:4em;">
+						<div class="post-thumb">
+							<img src="../../../images/articles/oct-nov2023/1890px-Dart-poster3.jpg">
+						</div>
+						<div class="logocam">
+							<p><img style='margin-top:4px; height:18px; width:21px; margin-right:7px; position:relative;'
+									src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><i style="position:absolute; margin-left:2px; padding-top:6.5px;"><a style="color:inherit;" href="https://www.nasa.gov/sites/default/files/thumbnails/image/dart-poster3_.jpeg">NASA / Johns Hopkins Applied Physics Lab</i></a></p>
+						</div>
+					</div>
+
+					<div class="primary-content">
+						<ul class="entry-meta">
+							<h1 class="page-title">Dart : Mission survie</h1>
+							<li class="cat"><a href="#" class="category-link" data-category="Espace">Espace</a>
+						</ul>
+
+						<p class="lead">Dart est une mission de la Nasa commencée le 24 novembre 2021 et qui s'est finie par le crash de l'appareil dans la nuit du 26 au 27 septembre 2022.</p>
+
+						<p class="drop-cap">DART, pour Dual Asteroid Redirection Test (test de redirection d'un duo d'astéroïdes), comme son nom l'indique, cherche à tester la capacité à dévier un astéroïde par une collision avec une sonde spatiale. La mission avait comme projet de tester une méthode de défense de la planète contre les dangers de l'espace, bien que le couple d'astéroïdes Didymos-Dymorphos ne soit pas une menace pour la planète.
+						</p>
+
+						<h2>Le 11 octobre 2022, la NASA a publié le résultat de la mission DART</h2>
+
+						<p class="drop-cap">La trajectoire de Dimorphos (aussi appelé Didymoon) autour de Didymos a été bel et bien modifiée et même plus que prévu. Les estimations de la NASA parlaient d'un changement d'orbite d'environ 73 secondes et l'orbite de Dimorphos (qui était de 11h et 55 minutes) fut en réalité raccourcie de 32 minutes (à 11h et 23 minutes) soit un changement de 4.5%, comparé aux 0.2% prévus.</p>
+
+						<p class="lead">Cet exploit va faire grandement avancer la science, et permettre la mise au point d'une défense mondiale face aux catastrophes venant de l'espace.</p>
+
+						<div>
+							<p>
+								<center><img style="width: 600px;"
+									src="../../../images/articles/oct-nov2023/1728px-Dimorphos_North-Up_Image_Composition_(final_10_full-frame_images).png"></center>
+							<div class="logocam">
+								<p style="position:relative; left:-20px; top:-55px; text-align:center; margin-bottom:-50px;"><img
+										src="../../../images/png-clipart-graphy-camera-logo-camera-text-photography.png"><span
+										class="lead" style="position:relative; left: 2%; top:2.5px;"><a href="https://dart.jhuapl.edu/Gallery/media/photos/lg/02_dimorphos_compillation_HD.png" style="color:inherit;"><i>NASA / Johns Hopkins APL</i></a></span></p>
+							</div>
+							</p>
+
+						</div>
+
+						<a
+							href="https://www.nasa.gov/planetarydefense/dart/dart-news" style="color:inherit;"><i style="font-size:small;">source
+							:
+							NASA</i></a>
+
+						<p class="tags">
+							<span>Tags :</span>
+							<a href="#">Eespace</a>
+						</p>
+
+						<?php include '../../../avatars/elisa.php'; ?>
+
+					</div> <!-- end entry-primary -->					
+
+				</article>
+
+
+			</div> <!-- end col-twelve -->
+		</div> <!-- end row -->
+
+
+		<?php include '../../../footer.php'; ?>
+
+		<div id="preloader">
+			<div id="loader"></div>
+		</div>
+
+		<!-- Java Script
+   ================================================== -->
+		<script src="../../../js/jquery-2.1.3.min.js"></script>
+		<script src="../../../js/plugins.js"></script>
+		<script src="../../../js/main.js"></script>
+		<script src="../../../js/categoryClick.js"></script>
+		
+</body>
+
+</html>
